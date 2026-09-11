@@ -1,5 +1,6 @@
 <?php
+$name = 'umer'
+$age = 22
 
-
-echo'fuck';
+echo'my name and age is ',$name , $age;
 ?>
