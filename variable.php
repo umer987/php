@@ -1,6 +1,6 @@
 <?php
-$name = 'umer'
-$age = 22
+$name = 'umer';
+$age = 22;
 
-echo'my name and age is ',$name , $age;
+echo'my name and age is ',$name ," ", $age;
 ?>
