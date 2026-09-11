@@ -1,3 +1,21 @@
-$name = readline("Enter your name: ");
+<?php
 
+$name = readline("Enter your name: ");
 echo "Hello, " . $name . "!" . PHP_EOL;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
