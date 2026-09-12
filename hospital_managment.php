@@ -183,4 +183,39 @@ $doc3 = new Doctor(3, "Bilal Raza", 50, "Neurologist", 200);
 $hospital->addDoctor($doc1);
 $hospital->addDoctor($doc2);
 $hospital->addDoctor($doc3);
+
+
+echo "<hr>";
+
+// ---- Add Patients ----
+$pat1 = new Patient(101, "Usman Tariq", 30, "Heart Problem");
+$pat2 = new Patient(102, "Ayesha Malik", 25, "Skin Allergy");
+$pat3 = new Patient(103, "Hassan Raza", 40, "Migraine");
+
+$hospital->addPatient($pat1);
+$hospital->addPatient($pat2);
+$hospital->addPatient($pat3);
+
+echo "<hr>";
+
+// ---- Book Appointments ----
+$hospital->bookAppointment($pat1, $doc1, "2026-09-15", "10:00 AM");
+$hospital->bookAppointment($pat2, $doc2, "2026-09-15", "11:30 AM");
+$hospital->bookAppointment($pat3, $doc3, "2026-09-16", "02:00 PM");
+
+echo "<hr>";
+
+// ---- Show Everything ----
+$hospital->showDoctors();
+echo "<hr>";
+$hospital->showPatients();
+echo "<hr>";
+$hospital->showAppointments();
+
+echo "<hr>";
+
+// ---- Stats ----
+$stats = $hospital->stats();
+echo "<h3>📊 Hospital Statistics</h3>";
+
 ?>
