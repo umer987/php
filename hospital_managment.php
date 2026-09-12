@@ -19,4 +19,30 @@ class Person {
     }
 }
 
+// ============================
+// 2. DOCTOR CLASS (extends Person)
+// ============================
+class Doctor extends Person {
+    private $specialization;
+    private $fee;
+    
+    public function __construct($id, $name, $age, $specialization, $fee) {
+        parent::__construct($id, $name, $age);
+        $this->specialization = $specialization;
+        $this->fee = $fee;
+    }
+    
+    public function getSpecialization() {
+        return $this->specialization;
+    }
+    
+    public function getFee() {
+        return $this->fee;
+    }
+    
+    public function getInfo() {
+        return parent::getInfo() . 
+               " | Doctor ({$this->specialization}) | Fee: \${$this->fee}";
+    }
+}
 ?>
