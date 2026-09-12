@@ -104,5 +104,68 @@ class Appointment {
                "({$this->doctor->getSpecialization()})";
     }
 }
+// ============================
+// 5. HOSPITAL CLASS (Manages Everything)
+// ============================
+class Hospital {
+    private $name;
+    private $doctors = [];
+    private $patients = [];
+    private $appointments = [];
+    
+    public function __construct($name) {
+        $this->name = $name;
+    }
+    
+    public function addDoctor(Doctor $doctor) {
+        $this->doctors[] = $doctor;
+        echo "👨‍⚕️ Doctor added: {$doctor->getName()}<br>";
+    }
+    
+    public function addPatient(Patient $patient) {
+        $this->patients[] = $patient;
+        echo "🧑 Patient added: {$patient->getName()}<br>";
+    }
+    
+    public function bookAppointment(Patient $patient, Doctor $doctor, $date, $time) {
+        $apt = new Appointment($patient, $doctor, $date, $time);
+        $this->appointments[] = $apt;
+        $patient->assignDoctor($doctor);
+        echo "📌 Appointment booked!<br>";
+    }
+    
+    public function showDoctors() {
+        echo "<h3>👨‍⚕️ Doctors List</h3>";
+        foreach ($this->doctors as $d) {
+            echo $d->getInfo() . "<br>";
+        }
+    }
+    
+    public function showPatients() {
+        echo "<h3>🧑 Patients List</h3>";
+        foreach ($this->patients as $p) {
+            echo $p->getInfo() . "<br>";
+        }
+    }
+    
+    public function showAppointments() {
+        echo "<h3>📅 Appointments</h3>";
+        if (empty($this->appointments)) {
+            echo "No appointments yet.<br>";
+            return;
+        }
+        foreach ($this->appointments as $a) {
+            echo $a->getDetails() . "<br>";
+        }
+    }
+    
+    public function stats() {
+        return [
+            'doctors' => count($this->doctors),
+            'patients' => count($this->patients),
+            'appointments' => count($this->appointments)
+        ];
+    }
+}
 
 ?>
