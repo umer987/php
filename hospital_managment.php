@@ -167,5 +167,20 @@ class Hospital {
         ];
     }
 }
+// ============================
+// 6. USING THE SYSTEM
+// ============================
 
+$hospital = new Hospital("City Care Hospital");
+
+echo "<h2>🏥 {$hospital->stats()['doctors']} Welcome to City Care Hospital</h2><hr>";
+
+// ---- Add Doctors ----
+$doc1 = new Doctor(1, "Ahmed Khan", 45, "Cardiologist", 150);
+$doc2 = new Doctor(2, "Sara Ali", 38, "Dermatologist", 100);
+$doc3 = new Doctor(3, "Bilal Raza", 50, "Neurologist", 200);
+
+$hospital->addDoctor($doc1);
+$hospital->addDoctor($doc2);
+$hospital->addDoctor($doc3);
 ?>
