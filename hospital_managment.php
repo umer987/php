@@ -225,4 +225,3 @@ echo "Total Patients: {$stats['patients']}<br>";
 echo "Total Appointments: {$stats['appointments']}<br>";
 
 ?>
-?>
