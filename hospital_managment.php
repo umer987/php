@@ -80,4 +80,29 @@ class Patient extends Person {
     }
 }
 
+
+// ============================
+// 4. APPOINTMENT CLASS
+// ============================
+class Appointment {
+    private $patient;
+    private $doctor;
+    private $date;
+    private $time;
+    
+    public function __construct(Patient $patient, Doctor $doctor, $date, $time) {
+        $this->patient = $patient;
+        $this->doctor = $doctor;
+        $this->date = $date;
+        $this->time = $time;
+    }
+    
+    public function getDetails() {
+        return "📅 {$this->date} at {$this->time} — " .
+               "Patient: {$this->patient->getName()} with " .
+               "Dr. {$this->doctor->getName()} " .
+               "({$this->doctor->getSpecialization()})";
+    }
+}
+
 ?>
