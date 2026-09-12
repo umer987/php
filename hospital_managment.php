@@ -217,5 +217,12 @@ echo "<hr>";
 // ---- Stats ----
 $stats = $hospital->stats();
 echo "<h3>📊 Hospital Statistics</h3>";
+// ---- Stats ----
+$stats = $hospital->stats();
+echo "<h3>📊 Hospital Statistics</h3>";
+echo "Total Doctors: {$stats['doctors']}<br>";
+echo "Total Patients: {$stats['patients']}<br>";
+echo "Total Appointments: {$stats['appointments']}<br>";
 
+?>
 ?>
