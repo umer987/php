@@ -5128,6 +5128,8 @@ Service/Repository architecture, Events/Listeners, Jobs/Queues, Mail/Notificatio
 **Day 8:** Blade basics (even though you're API-focused, understand it).
 **Day 9:** Database fundamentals + migrations (create, modify, rollback).
 **Day 10:** Models & Eloquent ORM CRUD.
+**Day 11:** Eloquent queries — where, orderBy, aggregates.
+**Day 12:** Relationships — hasOne, hasMany.
 
 # END OF COURSE
 
