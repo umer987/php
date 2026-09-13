@@ -5132,6 +5132,8 @@ Service/Repository architecture, Events/Listeners, Jobs/Queues, Mail/Notificatio
 **Day 12:** Relationships — hasOne, hasMany.
 **Day 13:** Relationships — belongsToMany, eager loading, N+1 problem.
 **Day 14:** Build a small blog API with Users → Posts → Comments relationships.
+**Day 15:** Form Request validation.
+**Day 16:** API Resources and pagination.
 
 # END OF COURSE
 
