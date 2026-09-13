@@ -5130,6 +5130,8 @@ Service/Repository architecture, Events/Listeners, Jobs/Queues, Mail/Notificatio
 **Day 10:** Models & Eloquent ORM CRUD.
 **Day 11:** Eloquent queries — where, orderBy, aggregates.
 **Day 12:** Relationships — hasOne, hasMany.
+**Day 13:** Relationships — belongsToMany, eager loading, N+1 problem.
+**Day 14:** Build a small blog API with Users → Posts → Comments relationships.
 
 # END OF COURSE
 
