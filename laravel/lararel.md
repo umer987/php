@@ -5124,6 +5124,8 @@ Service/Repository architecture, Events/Listeners, Jobs/Queues, Mail/Notificatio
 **Day 4:** Laravel project structure, `.env`, MVC, request lifecycle.
 **Day 5:** Routing — all HTTP verbs, parameters, named routes, groups.
 **Day 6:** Controllers — creation, resource controllers, dependency injection.
+**Day 7:** Review week 1; rebuild the Product CRUD API from Part 13 from memory.
+**Day 8:** Blade basics (even though you're API-focused, understand it).
 
 # END OF COURSE
 
