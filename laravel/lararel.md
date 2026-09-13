@@ -5122,6 +5122,8 @@ Service/Repository architecture, Events/Listeners, Jobs/Queues, Mail/Notificatio
 **Day 2:** PHP conditions, loops, functions, OOP basics (classes, objects, constructors).
 **Day 3:** PHP inheritance, interfaces, traits, namespaces, exceptions. Install Laravel, run `php artisan serve`.
 **Day 4:** Laravel project structure, `.env`, MVC, request lifecycle.
+**Day 5:** Routing — all HTTP verbs, parameters, named routes, groups.
+**Day 6:** Controllers — creation, resource controllers, dependency injection.
 
 # END OF COURSE
 
