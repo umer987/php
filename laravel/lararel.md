@@ -5138,6 +5138,18 @@ Service/Repository architecture, Events/Listeners, Jobs/Queues, Mail/Notificatio
 **Day 18:** Authentication with Sanctum — register/login/logout.
 **Day 19:** Authorization — Gates, Policies, roles.
 **Day 20:** File & image uploads.
+**Day 21:** Connect a real React app to your Laravel API (Axios, CORS, auth flow).
+**Day 22:** Middleware — build custom role middleware.
+**Day 23:** Service classes — refactor a controller into a service.
+**Day 24:** Events, Listeners, Jobs, Queues.
+**Day 25:** Mail and Notifications.
+**Day 26:** Error handling and Security best practices.
+**Day 27:** Seeders, Factories, and Testing (write your first Feature test).
+**Day 28:** Oracle setup and connection (or deepen MySQL if Oracle access isn't available yet).
+**Day 29:** Build the full E-Commerce final project from Part 38, end to end.
+**Day 30:** Deployment — push to GitHub, deploy to a real server/hosting platform, review the entire cheat sheet and interview questions.
+
+---
 
 # END OF COURSE
 
