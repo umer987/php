@@ -5126,6 +5126,8 @@ Service/Repository architecture, Events/Listeners, Jobs/Queues, Mail/Notificatio
 **Day 6:** Controllers — creation, resource controllers, dependency injection.
 **Day 7:** Review week 1; rebuild the Product CRUD API from Part 13 from memory.
 **Day 8:** Blade basics (even though you're API-focused, understand it).
+**Day 9:** Database fundamentals + migrations (create, modify, rollback).
+**Day 10:** Models & Eloquent ORM CRUD.
 
 # END OF COURSE
 
