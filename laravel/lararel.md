@@ -5120,6 +5120,8 @@ Service/Repository architecture, Events/Listeners, Jobs/Queues, Mail/Notificatio
 
 **Day 1:** PHP syntax, variables, data types, strings, arrays. Install PHP + Composer.
 **Day 2:** PHP conditions, loops, functions, OOP basics (classes, objects, constructors).
+**Day 3:** PHP inheritance, interfaces, traits, namespaces, exceptions. Install Laravel, run `php artisan serve`.
+**Day 4:** Laravel project structure, `.env`, MVC, request lifecycle.
 
 # END OF COURSE
 
