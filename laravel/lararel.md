@@ -5134,6 +5134,8 @@ Service/Repository architecture, Events/Listeners, Jobs/Queues, Mail/Notificatio
 **Day 14:** Build a small blog API with Users → Posts → Comments relationships.
 **Day 15:** Form Request validation.
 **Day 16:** API Resources and pagination.
+**Day 17:** Search, filter, sort — build a professional listing endpoint.
+**Day 18:** Authentication with Sanctum — register/login/logout.
 
 # END OF COURSE
 
