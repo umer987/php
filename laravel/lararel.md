@@ -5136,6 +5136,8 @@ Service/Repository architecture, Events/Listeners, Jobs/Queues, Mail/Notificatio
 **Day 16:** API Resources and pagination.
 **Day 17:** Search, filter, sort — build a professional listing endpoint.
 **Day 18:** Authentication with Sanctum — register/login/logout.
+**Day 19:** Authorization — Gates, Policies, roles.
+**Day 20:** File & image uploads.
 
 # END OF COURSE
 
