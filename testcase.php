@@ -31,3 +31,22 @@ public function test_notification_is_sent(): void
 }
 
 
+<?php
+
+use App\Models\User;
+
+it('can create a user', function () {
+    $response = $this->post('/users', [
+        'name' => 'John',
+        'email' => 'john@example.com',
+        'password' => 'password',
+    ]);
+
+    $response->assertRedirect('/users');
+    expect(User::count())->toBe(1);
+});
+
+it('requires authentication', function () {
+    $this->get('/dashboard')->assertRedirect('/login');
+})->throwsNoExceptions();
+
