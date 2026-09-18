@@ -71,3 +71,30 @@ public function admin(): static
         'role' => 'admin',
     ]);
 }
+
+public function test_api_returns_users_list(): void
+{
+    User::factory()->count(3)->create();
+
+    $response = $this->getJson('/api/users');
+
+    $response->assertStatus(200)
+        ->assertJsonCount(3, 'data')
+        ->assertJsonStructure([
+            'data' => [
+                '*' => ['id', 'name', 'email'],
+            ],
+        ]);
+}
+
+public function test_api_creates_user(): void
+{
+    $response = $this->postJson('/api/users', [
+        'name' => 'Jane',
+        'email' => 'jane@example.com',
+        'password' => 'password123',
+    ]);
+
+    $response->assertStatus(201)
+        ->assertJson(['data' => ['email' => 'jane@example.com']]);
+}
