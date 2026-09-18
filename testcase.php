@@ -122,3 +122,34 @@ public function test_email_must_be_valid(): void
 
     $response->assertSessionHasErrors('email');
 }
+
+public function test_user_can_login(): void
+{
+    $user = User::factory()->create([
+        'password' => bcrypt('password'),
+    ]);
+
+    $response = $this->post('/login', [
+        'email' => $user->email,
+        'password' => 'password',
+    ]);
+
+    $response->assertRedirect('/dashboard');
+    $this->assertAuthenticatedAs($user);
+}
+
+public function test_guest_cannot_access_dashboard(): void
+{
+    $response = $this->get('/dashboard');
+
+    $response->assertRedirect('/login');
+}
+
+public function test_authenticated_user_can_access_dashboard(): void
+{
+    $user = User::factory()->create();
+
+    $response = $this->actingAs($user)->get('/dashboard');
+
+    $response->assertStatus(200);
+}
