@@ -54,3 +54,20 @@ it('requires authentication', function () {
 $users = User::factory()->count(5)->create();
 $admin = User::factory()->admin()->create();
 $inactive = User::factory()->create(['active' => false]);
+
+// database/factories/UserFactory.php
+public function definition(): array
+{
+    return [
+        'name' => fake()->name(),
+        'email' => fake()->unique()->safeEmail(),
+        'password' => bcrypt('password'),
+    ];
+}
+
+public function admin(): static
+{
+    return $this->state(fn (array $attributes) => [
+        'role' => 'admin',
+    ]);
+}
