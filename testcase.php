@@ -153,3 +153,44 @@ public function test_authenticated_user_can_access_dashboard(): void
 
     $response->assertStatus(200);
 }
+
+
+public function test_user_can_be_created(): void
+{
+    $response = $this->post('/users', [
+        'name' => 'John Doe',
+        'email' => 'john@example.com',
+        'password' => 'password123',
+    ]);
+
+    $response->assertRedirect('/users');
+    $this->assertDatabaseHas('users', [
+        'email' => 'john@example.com',
+    ]);
+}
+
+public function test_user_can_be_updated(): void
+{
+    $user = User::factory()->create();
+
+    $response = $this->put("/users/{$user->id}", [
+        'name' => 'Updated Name',
+        'email' => $user->email,
+    ]);
+
+    $response->assertRedirect('/users');
+    $this->assertDatabaseHas('users', [
+        'id' => $user->id,
+        'name' => 'Updated Name',
+    ]);
+}
+
+public function test_user_can_be_deleted(): void
+{
+    $user = User::factory()->create();
+
+    $response = $this->delete("/users/{$user->id}");
+
+    $response->assertRedirect('/users');
+    $this->assertDatabaseMissing('users', ['id' => $user->id]);
+}
