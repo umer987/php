@@ -50,3 +50,7 @@ it('requires authentication', function () {
     $this->get('/dashboard')->assertRedirect('/login');
 })->throwsNoExceptions();
 
+// In test
+$users = User::factory()->count(5)->create();
+$admin = User::factory()->admin()->create();
+$inactive = User::factory()->create(['active' => false]);
