@@ -19,6 +19,11 @@ Route::get('/contact', function () {
 Route::get('/user/{id}', function ($id) {
     return 'User ID: ' . $id;
 });
+
+Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/about', [PageController::class, 'about'])->name('about');
+
+
 ?>
 
 
