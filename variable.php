@@ -36,6 +36,9 @@ Route::put('/posts/{id}', function ($id) {
 Route::patch('/posts/{id}', function ($id) {
     return "Update part of post $id";
 });
+Route::patch('/posts/{id}', function ($id) {
+    return "Update part of post $id";
+});
 ?>
 
 
