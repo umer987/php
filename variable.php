@@ -28,6 +28,10 @@ Route::get('/user/{id}', [PageController::class, 'user'])->name('user');
 Route::post('/posts', function () {
     return 'Create a new post';
 });
+
+Route::put('/posts/{id}', function ($id) {
+    return "Replace post $id";
+});
 ?>
 
 
