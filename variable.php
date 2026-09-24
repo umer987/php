@@ -16,9 +16,7 @@ Route::get('/contact', function () {
 
 
 
-Route::get('/user/{id}', function ($id) {
-    return 'User ID: ' . $id;
-});
+
 
 
 
