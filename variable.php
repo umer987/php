@@ -29,9 +29,7 @@ Route::post('/posts', function () {
     return 'Create a new post';
 });
 
-Route::put('/posts/{id}', function ($id) {
-    return "Replace post $id";
-});
+
 
 
 
