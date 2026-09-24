@@ -25,9 +25,7 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/user/{id}', [PageController::class, 'user'])->name('user');
 
-Route::post('/posts', function () {
-    return 'Create a new post';
-});
+
 
 
 
