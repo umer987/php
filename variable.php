@@ -4,9 +4,6 @@ $age = 22;
 
 echo'my name and age is ',$name ," ", $age;
 
-Route::get('/about', function () {
-    return 'About Page';
-});
 
 
 
