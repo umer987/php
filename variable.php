@@ -43,10 +43,7 @@ Route::post('/posts', function () {
     return 'Post created';
 });
 
-// PUT - Full update
-Route::put('/posts/{id}', function ($id) {
-    return "Post $id fully updated";
-});
+
 
 
 
