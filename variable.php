@@ -74,10 +74,7 @@ Route::redirect('/old-page', '/about');
 // View route (no closure needed)
 Route::view('/terms', 'terms');
 
-// Route with constraints (only numeric IDs)
-Route::get('/user/{id}', function ($id) {
-    return "User ID: $id";
-})->where('id', '[0-9]+');
+
 
 
 
