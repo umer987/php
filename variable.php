@@ -68,8 +68,6 @@ Route::any('/webhook', function () {
     return 'Webhook received';
 });
 
-// Redirect route
-Route::redirect('/old-page', '/about');
 
 
 
