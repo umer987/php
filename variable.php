@@ -90,13 +90,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
     })->name('settings');
 });
 
-// Resource routes (7 routes in 1 line)
-Route::resource('posts', PostController::class);
-
-
-
-
-
 
 
 
