@@ -34,9 +34,7 @@ Route::get('/about', function () {
 });
 
 // GET - With optional parameter
-Route::get('/greet/{name?}', function ($name = 'Guest') {
-    return "Hello, $name!";
-});
+
 
 
 
