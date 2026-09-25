@@ -58,10 +58,7 @@ Route::delete('/posts/{id}', function ($id) {
     return "Post $id deleted";
 });
 
-// Multiple methods on same URI
-Route::match(['get', 'post'], '/contact', function () {
-    return 'Contact page (GET or POST)';
-});
+
 
 
 
