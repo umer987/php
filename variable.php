@@ -38,10 +38,7 @@ Route::get('/greet/{name?}', function ($name = 'Guest') {
     return "Hello, $name!";
 });
 
-// POST - Create resource
-Route::post('/posts', function () {
-    return 'Post created';
-});
+
 
 
 
