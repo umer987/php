@@ -33,7 +33,6 @@ Route::get('/about', function () {
     return 'About Page';
 });
 
-// GET - With optional parameter
 
 
 
