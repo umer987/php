@@ -71,8 +71,6 @@ Route::any('/webhook', function () {
 // Redirect route
 Route::redirect('/old-page', '/about');
 
-// View route (no closure needed)
-Route::view('/terms', 'terms');
 
 
 
