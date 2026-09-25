@@ -53,10 +53,7 @@ Route::patch('/posts/{id}', function ($id) {
     return "Post $id partially updated";
 });
 
-// DELETE - Remove resource
-Route::delete('/posts/{id}', function ($id) {
-    return "Post $id deleted";
-});
+
 
 
 
