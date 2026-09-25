@@ -23,10 +23,6 @@ use App\Http\Controllers\UserController;
 |--------------------------------------------------------------------------
 */
 
-// GET - Home page (named route)
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
 
 
 
