@@ -93,10 +93,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 // Resource routes (7 routes in 1 line)
 Route::resource('posts', PostController::class);
 
-// Fallback route (must be last)
-Route::fallback(function () {
-    return response('Page Not Found', 404);
-});
+
 
 
 
