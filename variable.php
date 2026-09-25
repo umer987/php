@@ -13,7 +13,6 @@ echo'my name and age is ',$name ," ", $age;
 
 <?php
 
-use Illuminate\Support\Facades\Route;
 
 
 
