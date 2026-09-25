@@ -63,10 +63,7 @@ Route::match(['get', 'post'], '/contact', function () {
     return 'Contact page (GET or POST)';
 });
 
-// Any HTTP method
-Route::any('/webhook', function () {
-    return 'Webhook received';
-});
+
 
 
 
