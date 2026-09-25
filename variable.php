@@ -28,10 +28,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-// GET - Simple string response
-Route::get('/about', function () {
-    return 'About Page';
-});
 
 
 
