@@ -48,10 +48,7 @@ Route::put('/posts/{id}', function ($id) {
     return "Post $id fully updated";
 });
 
-// PATCH - Partial update
-Route::patch('/posts/{id}', function ($id) {
-    return "Post $id partially updated";
-});
+
 
 
 
