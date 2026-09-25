@@ -79,16 +79,6 @@ Route::get('/user/{id}', function ($id) {
     return "User ID: $id";
 })->where('id', '[0-9]+');
 
-// Route group with prefix + name prefix
-Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get('/dashboard', function () {
-        return 'Admin Dashboard';
-    })->name('dashboard');
-
-    Route::get('/settings', function () {
-        return 'Admin Settings';
-    })->name('settings');
-});
 
 
 
