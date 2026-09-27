@@ -15,3 +15,6 @@ $person = [
 ];
 
 // 2. Constants
+define("SITE_NAME", "RawPHP");
+const VERSION = "1.0";
+
