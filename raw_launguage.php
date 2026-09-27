@@ -34,3 +34,6 @@ echo "<h2>Fruits:</h2><ul>";
 foreach ($fruits as $fruit) {
     echo "<li>$fruit</li>";
 }
+echo "</ul>";
+
+// 6. Functions
