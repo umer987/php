@@ -9,3 +9,5 @@ $pi = 3.14159;
 $isActive = true;
 $fruits = ["apple", "banana", "cherry"];
 $person = [
+    "name" => "Alice",
+    "age" => 30,
