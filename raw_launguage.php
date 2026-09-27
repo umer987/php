@@ -11,3 +11,7 @@ $fruits = ["apple", "banana", "cherry"];
 $person = [
     "name" => "Alice",
     "age" => 30,
+    "city" => "Wonderland"
+];
+
+// 2. Constants
