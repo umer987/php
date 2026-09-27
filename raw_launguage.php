@@ -40,3 +40,40 @@ echo "</ul>";
 function add($a, $b) {
     return $a + $b;
 }
+
+function greet($name = "Guest") {
+    return "Hello, $name!";
+}
+
+echo "<p>2 + 3 = " . add(2, 3) . "</p>";
+echo "<p>" . greet("Bob") . "</p>";
+echo "<p>" . greet() . "</p>";
+
+// 7. Arrays and array functions
+$numbers = [5, 3, 8, 1, 9];
+sort($numbers);
+echo "<p>Sorted numbers: " . implode(", ", $numbers) . "</p>";
+
+$sum = array_sum($numbers);
+echo "<p>Sum of numbers: $sum</p>";
+
+// 8. Associative array iteration
+echo "<h2>Person Details:</h2><ul>";
+foreach ($person as $key => $value) {
+    echo "<li><strong>$key:</strong> $value</li>";
+}
+echo "</ul>";
+
+// 9. Switch statement
+$day = "Monday";
+switch ($day) {
+    case "Monday":
+        echo "<p>Start of the work week.</p>";
+        break;
+    case "Friday":
+        echo "<p>Almost weekend!</p>";
+        break;
+    default:
+        echo "<p>Just another day.</p>";
+}
+?>
