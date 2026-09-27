@@ -6,3 +6,6 @@
 $greeting = "Hello, World!";
 $number = 42;
 $pi = 3.14159;
+$isActive = true;
+$fruits = ["apple", "banana", "cherry"];
+$person = [
