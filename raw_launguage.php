@@ -26,3 +26,11 @@ echo "<p>Welcome to " . SITE_NAME . " version " . VERSION . "</p>";
 if ($isActive) {
     echo "<p>The system is active.</p>";
 } else {
+    echo "<p>The system is inactive.</p>";
+}
+
+// 5. Loops
+echo "<h2>Fruits:</h2><ul>";
+foreach ($fruits as $fruit) {
+    echo "<li>$fruit</li>";
+}
