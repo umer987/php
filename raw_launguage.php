@@ -17,7 +17,6 @@ const VERSION = "1.0";
 echo "<h1>$greeting</h1>";
 echo "<p>Welcome to " . SITE_NAME . " version " . VERSION . "</p>";
 
-// 4. Conditionals
 if ($isActive) {
     echo "<p>The system is active.</p>";
 } else {
