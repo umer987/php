@@ -29,7 +29,6 @@ foreach ($fruits as $fruit) {
 }
 echo "</ul>";
 
-// 6. Functions
 function add($a, $b) {
     return $a + $b;
 }
