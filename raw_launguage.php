@@ -48,7 +48,6 @@ echo "<p>Sorted numbers: " . implode(", ", $numbers) . "</p>";
 $sum = array_sum($numbers);
 echo "<p>Sum of numbers: $sum</p>";
 
-// 8. Associative array iteration
 echo "<h2>Person Details:</h2><ul>";
 foreach ($person as $key => $value) {
     echo "<li><strong>$key:</strong> $value</li>";
