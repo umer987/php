@@ -14,7 +14,6 @@ $person = [
 define("SITE_NAME", "RawPHP");
 const VERSION = "1.0";
 
-// 3. String interpolation
 echo "<h1>$greeting</h1>";
 echo "<p>Welcome to " . SITE_NAME . " version " . VERSION . "</p>";
 
