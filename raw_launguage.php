@@ -23,7 +23,6 @@ if ($isActive) {
     echo "<p>The system is inactive.</p>";
 }
 
-// 5. Loops
 echo "<h2>Fruits:</h2><ul>";
 foreach ($fruits as $fruit) {
     echo "<li>$fruit</li>";
