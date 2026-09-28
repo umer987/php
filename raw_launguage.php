@@ -54,7 +54,6 @@ foreach ($person as $key => $value) {
 }
 echo "</ul>";
 
-// 9. Switch statement
 $day = "Monday";
 switch ($day) {
     case "Monday":
