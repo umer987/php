@@ -135,4 +135,12 @@ function validate(array $data, array $rules): array
                 $errors[$field] = "$field is required";
             } elseif ($r === 'string' && $value !== null && !is_string($value)) {
                 $errors[$field] = "$field must be a string";
+            } elseif (str_starts_with($r, 'max:') && $value !== null) {
+                $max = (int) substr($r, 4);
+                if (strlen($value) > $max) $errors[$field] = "$field max $max chars";
+            } elseif ($r === 'bool' && $value !== null && !is_bool($value) && !in_array($value, [0, 1, '0', '1'], true)) {
+                $errors[$field] = "$field must be boolean";
+            }
+        }
+    }
 
