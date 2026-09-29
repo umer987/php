@@ -125,4 +125,14 @@ function input(): array
     return json_decode($raw, true) ?? [];
 }
 
+function validate(array $data, array $rules): array
+{
+    $errors = [];
+    foreach ($rules as $field => $rule) {
+        $value = $data[$field] ?? null;
+        foreach (explode('|', $rule) as $r) {
+            if ($r === 'required' && ($value === null || $value === '')) {
+                $errors[$field] = "$field is required";
+            } elseif ($r === 'string' && $value !== null && !is_string($value)) {
+                $errors[$field] = "$field must be a string";
 
