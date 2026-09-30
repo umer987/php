@@ -111,10 +111,5 @@ function db(): PDO
     return $pdo;
 }
 
-function respond($data, int $code = 200): void
-{
-    http_response_code($code);
-    echo json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-    exit;
-}
+
 
