@@ -111,7 +111,6 @@ function db(): PDO
     return $pdo;
 }
 
-// ---------- 3. HELPERS ----------
 function respond($data, int $code = 200): void
 {
     http_response_code($code);
