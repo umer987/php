@@ -119,11 +119,3 @@ function respond($data, int $code = 200): void
     exit;
 }
 
-function input(): array
-{
-    $raw = file_get_contents('php://input');
-    return json_decode($raw, true) ?? [];
-}
-
-
-           
