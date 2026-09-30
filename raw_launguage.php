@@ -137,5 +137,5 @@ function validate(array $data, array $rules): array
                 $errors[$field] = "$field must be a string";
             } elseif (str_starts_with($r, 'max:') && $value !== null) {
                 $max = (int) substr($r, 4);
-                if (strlen($value) > $max) $errors[$field] = "$field max $max chars";
+
            
