@@ -75,10 +75,6 @@ switch ($day) {
 // Test: http://localhost:8000/api.php/tasks
 // ============================================================
 
-// ---------- 1. CONFIG & HEADERS ----------
-header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 
 
 
