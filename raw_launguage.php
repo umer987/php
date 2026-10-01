@@ -54,7 +54,7 @@ foreach ($person as $key => $value) {
 }
 echo "</ul>";
 
-$day = "Mondaay";
+$day = "Monday";
 switch ($day) {
     case "Monday":
         echo "<p>Start of the work week.</p>";
