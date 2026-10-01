@@ -83,10 +83,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') exit;
 
-const DB_HOST = 'localhost';
-const DB_NAME = 'task_db';
-const DB_USER = 'root';
-const DB_PASS = '';
+
 
 
 
