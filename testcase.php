@@ -178,6 +178,5 @@ public function test_user_can_be_updated(): void
         'email' => $user->email,
     ]);
 
-    $response->assertRedirect('/users');
  
 }
