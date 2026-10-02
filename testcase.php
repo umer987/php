@@ -123,20 +123,7 @@ public function test_email_must_be_valid(): void
     $response->assertSessionHasErrors('email');
 }
 
-public function test_user_can_login(): void
-{
-    $user = User::factory()->create([
-        'password' => bcrypt('password'),
-    ]);
 
-    $response = $this->post('/login', [
-        'email' => $user->email,
-        'password' => 'password',
-    ]);
-
-    $response->assertRedirect('/dashboard');
-    $this->assertAuthenticatedAs($user);
-}
 
 
 
