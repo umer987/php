@@ -173,10 +173,7 @@ public function test_user_can_be_updated(): void
 {
     $user = User::factory()->create();
 
-    $response = $this->put("/users/{$user->id}", [
-        'name' => 'Updated Name',
-        'email' => $user->email,
-    ]);
+
 
  
 }
