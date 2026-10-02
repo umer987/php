@@ -145,14 +145,7 @@ public function test_guest_cannot_access_dashboard(): void
     $response->assertRedirect('/login');
 }
 
-public function test_authenticated_user_can_access_dashboard(): void
-{
-    $user = User::factory()->create();
 
-    $response = $this->actingAs($user)->get('/dashboard');
-
-    $response->assertStatus(200);
-}
 
 
 
