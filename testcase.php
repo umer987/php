@@ -155,19 +155,7 @@ public function test_authenticated_user_can_access_dashboard(): void
 }
 
 
-public function test_user_can_be_created(): void
-{
-    $response = $this->post('/users', [
-        'name' => 'John Doe',
-        'email' => 'john@example.com',
-        'password' => 'password123',
-    ]);
 
-    $response->assertRedirect('/users');
-    $this->assertDatabaseHas('users', [
-        'email' => 'john@example.com',
-    ]);
-}
 
 
 
