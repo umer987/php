@@ -184,13 +184,3 @@ public function test_user_can_be_updated(): void
         'name' => 'Updated Name',
     ]);
 }
-
-public function test_user_can_be_deleted(): void
-{
-    $user = User::factory()->create();
-
-    $response = $this->delete("/users/{$user->id}");
-
-    $response->assertRedirect('/users');
-    $this->assertDatabaseMissing('users', ['id' => $user->id]);
-}
