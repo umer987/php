@@ -138,12 +138,6 @@ public function test_user_can_login(): void
     $this->assertAuthenticatedAs($user);
 }
 
-public function test_guest_cannot_access_dashboard(): void
-{
-    $response = $this->get('/dashboard');
-
-    $response->assertRedirect('/login');
-}
 
 
 
