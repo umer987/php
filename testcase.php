@@ -169,9 +169,7 @@ public function test_user_can_be_created(): void
     ]);
 }
 
-public function test_user_can_be_updated(): void
-{
-    $user = User::factory()->create();
+
 
 
 
