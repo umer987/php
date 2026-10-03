@@ -120,12 +120,7 @@ public function test_email_must_be_valid(): void
         'password' => 'password123',
     ]);
 
-    $response->assertSessionHasErrors('email');
-}
-
-
-
-
+    $response->assertSessionHasErrors('
 
 
 
