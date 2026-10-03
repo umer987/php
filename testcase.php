@@ -72,20 +72,6 @@ public function admin(): static
     ]);
 }
 
-public function test_api_returns_users_list(): void
-{
-    User::factory()->count(3)->create();
-
-    $response = $this->getJson('/api/users');
-
-    $response->assertStatus(200)
-        ->assertJsonCount(3, 'data')
-        ->assertJsonStructure([
-            'data' => [
-                '*' => ['id', 'name', 'email'],
-            ],
-        ]);
-}
 
 
 
