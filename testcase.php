@@ -65,16 +65,6 @@ public function definition(): array
     ];
 }
 
-public function admin(): static
-{
-    return $this->state(fn (array $attributes) => [
-        'role' => 'admin',
-    ]);
-}
-
-
-
-
 
 
 
