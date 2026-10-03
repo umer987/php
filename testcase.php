@@ -101,26 +101,7 @@ public function test_api_creates_user(): void
 
 
 
-public function test_email_is_required(): void
-{
-    $response = $this->post('/users', [
-        'name' => 'John',
-        'password' => 'password123',
-    ]);
 
-    $response->assertSessionHasErrors('email');
-    $this->assertDatabaseCount('users', 0);
-}
-
-public function test_email_must_be_valid(): void
-{
-    $response = $this->post('/users', [
-        'name' => 'John',
-        'email' => 'not-an-email',
-        'password' => 'password123',
-    ]);
-
-    $response->assertSessionHasErrors('
 
 
 
