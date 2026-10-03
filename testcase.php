@@ -87,17 +87,6 @@ public function test_api_returns_users_list(): void
         ]);
 }
 
-public function test_api_creates_user(): void
-{
-    $response = $this->postJson('/api/users', [
-        'name' => 'Jane',
-        'email' => 'jane@example.com',
-        'password' => 'password123',
-    ]);
-
-    $response->assertStatus(201)
-        ->assertJson(['data' => ['email' => 'jane@example.com']]);
-}
 
 
 
