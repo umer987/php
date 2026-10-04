@@ -55,8 +55,7 @@ $users = User::factory()->count(5)->create();
 $admin = User::factory()->admin()->create();
 $inactive = User::factory()->create(['active' => false]);
 
-// database/factories/UserFactory.php
-public function definition(): array
+
     
 
 
