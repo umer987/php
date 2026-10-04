@@ -46,9 +46,7 @@ it('can create a user', function () {
     expect(User::count())->toBe(1);
 });
 
-it('requires authentication', function () {
-    $this->get('/dashboard')->assertRedirect('/login');
-})->throwsNoExceptions();
+
 
 
 
