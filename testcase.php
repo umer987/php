@@ -31,10 +31,6 @@ public function test_notification_is_sent(): void
 }
 
 
-<?php
-
-use App\Models\User;
-
 
 
 
