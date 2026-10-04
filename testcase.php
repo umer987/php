@@ -59,13 +59,7 @@ $inactive = User::factory()->create(['active' => false]);
 public function definition(): array
 {
     return [
-        'name' => fake()->name(),
-        'email' => fake()->unique()->safeEmail(),
-        'password' => bcrypt('password'),
-    ];
-}
-
-
+     
 
 
 
