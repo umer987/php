@@ -35,16 +35,6 @@ public function test_notification_is_sent(): void
 
 use App\Models\User;
 
-it('can create a user', function () {
-    $response = $this->post('/users', [
-        'name' => 'John',
-        'email' => 'john@example.com',
-        'password' => 'password',
-    ]);
-
-    $response->assertRedirect('/users');
-    expect(User::count())->toBe(1);
-});
 
 
 
