@@ -58,8 +58,7 @@ $inactive = User::factory()->create(['active' => false]);
 // database/factories/UserFactory.php
 public function definition(): array
 {
-    return [
-     
+    
 
 
 
