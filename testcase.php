@@ -191,4 +191,6 @@ function deleteTask(int $id): void
 {
     $stmt = db()->prepare('DELETE FROM tasks WHERE id = ?');
     $stmt->execute([$id]);
- 
+    if ($stmt->rowCount() === 0) respond(['error' => 'Task not found'], 404);
+    respond(['message' => 'Task deleted', 'id' => $id]);
+}
