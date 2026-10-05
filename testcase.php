@@ -41,3 +41,38 @@ function db(): PDO
     return $pdo;
 }
 
+// ---------- 3. HELPERS ----------
+function respond($data, int $code = 200): void
+{
+    http_response_code($code);
+    echo json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
+function input(): array
+{
+    $raw = file_get_contents('php://input');
+    return json_decode($raw, true) ?? [];
+}
+
+function validate(array $data, array $rules): array
+{
+    $errors = [];
+    foreach ($rules as $field => $rule) {
+        $value = $data[$field] ?? null;
+        foreach (explode('|', $rule) as $r) {
+            if ($r === 'required' && ($value === null || $value === '')) {
+                $errors[$field] = "$field is required";
+            } elseif ($r === 'string' && $value !== null && !is_string($value)) {
+                $errors[$field] = "$field must be a string";
+            } elseif (str_starts_with($r, 'max:') && $value !== null) {
+                $max = (int) substr($r, 4);
+                if (strlen($value) > $max) $errors[$field] = "$field max $max chars";
+            } elseif ($r === 'bool' && $value !== null && !is_bool($value) && !in_array($value, [0, 1, '0', '1'], true)) {
+                $errors[$field] = "$field must be boolean";
+            }
+        }
+    }
+    if ($errors) respond(['errors' => $errors], 422);
+    return $data;
+}
