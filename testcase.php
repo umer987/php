@@ -136,3 +136,23 @@ function showTask(int $id): void
     $task = $stmt->fetch();
     $task ? respond(['data' => $task]) : respond(['error' => 'Task not found'], 404);
 }
+
+function createTask(): void
+{
+    $data = validate(input(), [
+        'title'       => 'required|string|max:255',
+        'description' => 'string',
+        'completed'   => 'bool',
+    ]);
+
+    $stmt = db()->prepare(
+        'INSERT INTO tasks (title, description, completed) VALUES (?, ?, ?)'
+    );
+    $stmt->execute([
+        $data['title'],
+        $data['description'] ?? null,
+        !empty($data['completed']) ? 1 : 0,
+    ]);
+
+    showTask((int) db()->lastInsertId());
+}
