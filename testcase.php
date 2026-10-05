@@ -86,3 +86,39 @@ function middleware(): void
         respond(['error' => 'Unauthorized — send header X-API-Key: secret-key-123'], 401);
     }
 }
+
+// ---------- 5. ROUTER ----------
+$method = $_SERVER['REQUEST_METHOD'];
+$path   = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$parts  = array_values(array_filter(explode('/', $path)));   // ['api.php', 'tasks', '5']
+array_shift($parts);                                          // remove 'api.php'
+$resource = $parts[0] ?? null;
+$id       = $parts[1] ?? null;
+
+if ($resource !== 'tasks') {
+    respond(['error' => 'Not found'], 404);
+}
+
+middleware();   // all /tasks routes require API key
+
+// ---------- 6. ROUTES ----------
+switch ($method) {
+    case 'GET':
+        $id ? showTask((int)$id) : listTasks();
+        break;
+    case 'POST':
+        createTask();
+        break;
+    case 'PUT':
+    case 'PATCH':
+        if (!$id) respond(['error' => 'ID required'], 400);
+        updateTask((int)$id);
+        break;
+    case 'DELETE':
+        if (!$id) respond(['error' => 'ID required'], 400);
+        deleteTask((int)$id);
+        break;
+    default:
+        respond(['error' => 'Method not allowed'], 405);
+}
+
