@@ -1,50 +1,12 @@
-use Illuminate\Support\Facades\Event;
-use Illuminate\Support\Facades\Queue;
-use Illuminate\Support\Facades\Notification;
+<?php
+// ============================================================
+// RAW PHP CRUD API — Tasks
+// Run:  php -S localhost:8000
+// Test: http://localhost:8000/api.php/tasks
+// ============================================================
 
-public function test_event_is_dispatched(): void
-{
-    Event::fake();
-
-    $this->post('/users', [...]);
-
-    Event::assertDispatched(UserRegistered::class);
-}
-
-public function test_job_is_pushed(): void
-{
-    Queue::fake();
-
-    $this->post('/orders', [...]);
-
-    Queue::assertPushed(ProcessOrder::class);
-}
-
-public function test_notification_is_sent(): void
-{
-    Notification::fake();
-
-    $user = User::factory()->create();
-    $this->actingAs($user)->post('/orders', [...]);
-
-    Notification::assertSentTo($user, OrderPlaced::class);
-}
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
- 
+// ---------- 1. CONFIG & HEADERS ----------
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
