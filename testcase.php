@@ -122,3 +122,17 @@ switch ($method) {
         respond(['error' => 'Method not allowed'], 405);
 }
 
+// ---------- 7. CONTROLLERS ----------
+function listTasks(): void
+{
+    $stmt = db()->query('SELECT * FROM tasks ORDER BY id DESC');
+    respond(['data' => $stmt->fetchAll()]);
+}
+
+function showTask(int $id): void
+{
+    $stmt = db()->prepare('SELECT * FROM tasks WHERE id = ?');
+    $stmt->execute([$id]);
+    $task = $stmt->fetch();
+    $task ? respond(['data' => $task]) : respond(['error' => 'Task not found'], 404);
+}
