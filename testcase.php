@@ -186,3 +186,9 @@ function updateTask(int $id): void
 
     showTask($id);
 }
+
+function deleteTask(int $id): void
+{
+    $stmt = db()->prepare('DELETE FROM tasks WHERE id = ?');
+    $stmt->execute([$id]);
+ 
