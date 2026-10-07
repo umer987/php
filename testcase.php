@@ -170,14 +170,7 @@ function updateTask(int $id): void
         'completed'   => 'bool',
     ]);
 
-    $fields = [];
-    $values = [];
-    foreach (['title', 'description', 'completed'] as $f) {
-        if (array_key_exists($f, $data)) {
-            $fields[] = "$f = ?";
-            $values[] = $f === 'completed' ? (int) $data[$f] : $data[$f];
-        }
-    }
+   
 
 
 }
