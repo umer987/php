@@ -157,14 +157,5 @@ function createTask(): void
     showTask((int) db()->lastInsertId());
 }
 
-function updateTask(int $id): void
-{
 
-
-
-
-   
-
-
-}
 
