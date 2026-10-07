@@ -132,9 +132,7 @@ function listTasks(): void
 function showTask(int $id): void
 {
     $stmt = db()->prepare('SELECT * FROM tasks WHERE id = ?');
-    $stmt->execute([$id]);
-    $task = $stmt->fetch();
-    $task ? respond(['data' => $task]) : respond(['error' => 'Task not found'], 404);
+ 
 }
 
 
