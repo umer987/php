@@ -178,11 +178,7 @@ function updateTask(int $id): void
             $values[] = $f === 'completed' ? (int) $data[$f] : $data[$f];
         }
     }
-    if (!$fields) respond(['error' => 'No fields to update'], 400);
 
-    $values[] = $id;
-    db()->prepare('UPDATE tasks SET ' . implode(', ', $fields) . ' WHERE id = ?')
-        ->execute($values);
 
 }
 
