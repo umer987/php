@@ -129,10 +129,7 @@ function listTasks(): void
     respond(['data' => $stmt->fetchAll()]);
 }
 
-function showTask(int $id): void
-{
- 
-}
+
 
 
 
