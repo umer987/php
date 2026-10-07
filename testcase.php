@@ -131,7 +131,6 @@ function listTasks(): void
 
 function showTask(int $id): void
 {
-    $stmt = db()->prepare('SELECT * FROM tasks WHERE id = ?');
  
 }
 
