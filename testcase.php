@@ -164,11 +164,7 @@ function updateTask(int $id): void
     $stmt->execute([$id]);
     if (!$stmt->fetch()) respond(['error' => 'Task not found'], 404);
 
-    $data = validate(input(), [
-        'title'       => 'string|max:255',
-        'description' => 'string',
-        'completed'   => 'bool',
-    ]);
+
 
    
 
