@@ -95,9 +95,6 @@ array_shift($parts);                                          // remove 'api.php
 $resource = $parts[0] ?? null;
 $id       = $parts[1] ?? null;
 
-if ($resource !== 'tasks') {
-    respond(['error' => 'Not found'], 404);
-}
 
 
 
