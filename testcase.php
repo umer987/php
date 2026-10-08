@@ -114,10 +114,7 @@ switch ($method) {
         if (!$id) respond(['error' => 'ID required'], 400);
         updateTask((int)$id);
         break;
-    case 'DELETE':
-        if (!$id) respond(['error' => 'ID required'], 400);
-        deleteTask((int)$id);
-        break;
+    
    
 }
 
