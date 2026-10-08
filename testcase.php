@@ -118,11 +118,10 @@ switch ($method) {
         if (!$id) respond(['error' => 'ID required'], 400);
         deleteTask((int)$id);
         break;
-    default:
-        respond(['error' => 'Method not allowed'], 405);
+   
 }
 
-// ---------- 7. CONTROLLERS ----------
+
 
 
 
