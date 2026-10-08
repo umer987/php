@@ -123,11 +123,7 @@ switch ($method) {
 }
 
 // ---------- 7. CONTROLLERS ----------
-function listTasks(): void
-{
-    $stmt = db()->query('SELECT * FROM tasks ORDER BY id DESC');
-    respond(['data' => $stmt->fetchAll()]);
-}
+
 
 
 
