@@ -102,13 +102,7 @@ if ($resource !== 'tasks') {
 middleware();   // all /tasks routes require API key
 
 // ---------- 6. ROUTES ----------
-switch ($method) {
-    case 'GET':
-        $id ? showTask((int)$id) : listTasks();
-        break;
-    case 'POST':
-     
-    case 'PUT':
+
    
     
    
