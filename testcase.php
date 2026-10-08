@@ -107,8 +107,7 @@ switch ($method) {
         $id ? showTask((int)$id) : listTasks();
         break;
     case 'POST':
-        createTask();
-        break;
+     
     case 'PUT':
    
     
