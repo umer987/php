@@ -99,14 +99,7 @@ if ($resource !== 'tasks') {
     respond(['error' => 'Not found'], 404);
 }
 
-middleware();   // all /tasks routes require API key
 
-// ---------- 6. ROUTES ----------
-
-   
-    
-   
-}
 
 
 
