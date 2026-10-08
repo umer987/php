@@ -78,14 +78,7 @@ function validate(array $data, array $rules): array
 }
 
 // ---------- 4. MIDDLEWARE ----------
-function middleware(): void
-{
-    // Example: require API key
-    $key = $_SERVER['HTTP_X_API_KEY'] ?? '';
-    if ($key !== 'secret-key-123') {
-        respond(['error' => 'Unauthorized — send header X-API-Key: secret-key-123'], 401);
-    }
-}
+
 
 
 
