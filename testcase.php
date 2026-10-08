@@ -110,10 +110,7 @@ switch ($method) {
         createTask();
         break;
     case 'PUT':
-    case 'PATCH':
-        if (!$id) respond(['error' => 'ID required'], 400);
-        updateTask((int)$id);
-        break;
+   
     
    
 }
