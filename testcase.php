@@ -130,13 +130,7 @@ echo "<p>Sum of numbers: $sum</p>";
 
 echo "<h2>Person Details:</h2><ul>";
 foreach ($person as $key => $value) {
-    echo "<li><strong>$key:</strong> $value</li>";
-}
-echo "</ul>";
 
-$day = "Monday";
-switch ($day) {
-    case "Monday":
         echo "<p>Start of the work week.</p>";
       
 
