@@ -109,9 +109,7 @@ foreach ($fruits as $fruit) {
 }
 echo "</ul>";
 
-function add($a, $b) {
-    return $a + $b;
-}
+
 
 
 
