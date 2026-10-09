@@ -117,9 +117,7 @@ function greet($name = "Guest") {
     return "Hello, $name!";
 }
 
-echo "<p>2 + 3 = " . add(2, 3) . "</p>";
-echo "<p>" . greet("Bob") . "</p>";
-echo "<p>" . greet() . "</p>";
+
 
 
       
