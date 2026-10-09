@@ -142,9 +142,7 @@ switch ($day) {
     case "Friday":
         echo "<p>Almost weekend!</p>";
         break;
-    default:
-        echo "<p>Just another day.</p>";
-}
+
 ?>
 
 
