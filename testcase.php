@@ -125,13 +125,7 @@ $numbers = [5, 3, 8, 1, 9];
 sort($numbers);
 echo "<p>Sorted numbers: " . implode(", ", $numbers) . "</p>";
 
-$sum = array_sum($numbers);
-echo "<p>Sum of numbers: $sum</p>";
 
-echo "<h2>Person Details:</h2><ul>";
-foreach ($person as $key => $value) {
-
-        echo "<p>Start of the work week.</p>";
       
 
 
