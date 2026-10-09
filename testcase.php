@@ -121,10 +121,6 @@ echo "<p>2 + 3 = " . add(2, 3) . "</p>";
 echo "<p>" . greet("Bob") . "</p>";
 echo "<p>" . greet() . "</p>";
 
-$numbers = [5, 3, 8, 1, 9];
-sort($numbers);
-echo "<p>Sorted numbers: " . implode(", ", $numbers) . "</p>";
-
 
       
 
