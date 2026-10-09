@@ -138,12 +138,7 @@ $day = "Monday";
 switch ($day) {
     case "Monday":
         echo "<p>Start of the work week.</p>";
-        break;
-    case "Friday":
-        echo "<p>Almost weekend!</p>";
-        break;
-
-?>
+      
 
 
 
