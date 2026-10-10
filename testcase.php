@@ -91,8 +91,6 @@ $person = [
     "city" => "Wonderland"
 ];
 
-define("SITE_NAME", "RawPHP");
-const VERSION = "1.0";
 
 
 
