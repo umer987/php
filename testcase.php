@@ -78,7 +78,6 @@ function validate(array $data, array $rules): array
 }
 
 // ---------- 4. MIDDLEWARE ----------
-<?php
 
 $greeting = "Hello, World!";
 $number = 42;
