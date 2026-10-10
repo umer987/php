@@ -77,18 +77,8 @@ function validate(array $data, array $rules): array
     return $data;
 }
 
-// ---------- 4. MIDDLEWARE ----------
 
-$greeting = "Hello, World!";
-$number = 42;
-$pi = 3.14159;
-$isActive = true;
-$fruits = ["apple", "banana", "cherry"];
-$person = [
-    "name" => "Alice",
-    "age" => 30,
-    "city" => "Wonderland"
-];
+
 
 
 
