@@ -63,7 +63,7 @@ function validate(array $data, array $rules): array
         foreach (explode('|', $rule) as $r) {
             if ($r === 'required' && ($values === null || $values === '')) {
                 $errors[$fieldsss] = "$fieldsss is required";
-            } elseif ($r === 'string' && $values !== null && !is_string($values)) {
+            } 
                 $errors[$fieldsss] = "$fieldsss must be a string";
             } r, 'max:') && $valuess !== null) {
                 $max = (int) substr($r, 4);
