@@ -64,8 +64,7 @@ function validate(array $data, array $rules): array
             if ($r === 'required' && ($values === null || $values === '')) {
                 $errors[$fieldsss] = "$fieldsss is required";
             } 
-                $errors[$fieldsss] = "$fieldsss must be a string";
-            } r, 'max:') && $valuess !== null) {
+                 'max:') && $valuess !== null) {
                 $max = (int) substr($r, 4);
                 if (strlen($values) > $max) $errors[$fieldsss] = "$fieldsss max $max chars";
             }
