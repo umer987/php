@@ -63,9 +63,7 @@ function validate(array $data, array $rules): array
         foreach (explode('|', $rule) as $r) {
             if ($r === 'required' && ($values === null || $values === '')) {
                 $errors[$fieldsss] = "$fieldsss is required";
-            } 
-                
-            
+            }
         }
     }
     if ($errors) respond(['errors' => $errors], 422);
