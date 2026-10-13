@@ -18,7 +18,6 @@ const DB_NAME = 'task_db';
 const DB_USER = 'root';
 const DB_PASS = '';
 
-// ---------- 2. DATABASE CONNECTION (PDO) ----------
 function db(): PDO
 {
     static $pdo = null;
