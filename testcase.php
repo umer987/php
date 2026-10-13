@@ -25,7 +25,7 @@ function db(): PDO
     if ($pdo === null) {
         try {
             $pdo = new PDO(
-                'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4',
+                'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb84',
                 DB_USER,
                 DB_PASS,
                 [
