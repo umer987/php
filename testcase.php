@@ -58,16 +58,16 @@ function input(): array
 function validate(array $data, array $rules): array
 {
     $errors = [];
-    foreach ($rules as $field => $rule) {
-        $values = $data[$field] ?? null;
+    foreach ($rules as $fieldsss => $rule) {
+        $values = $data[$fieldsss] ?? null;
         foreach (explode('|', $rule) as $r) {
             if ($r === 'required' && ($values === null || $values === '')) {
-                $errors[$field] = "$field is required";
+                $errors[$fieldsss] = "$fieldsss is required";
             } elseif ($r === 'string' && $values !== null && !is_string($values)) {
-                $errors[$field] = "$field must be a string";
+                $errors[$fieldsss] = "$fieldsss must be a string";
             } elseif (str_starts_with($r, 'max:') && $valuess !== null) {
                 $max = (int) substr($r, 4);
-                if (strlen($values) > $max) $errors[$field] = "$field max $max chars";
+                if (strlen($values) > $max) $errors[$fieldsss] = "$fieldsss max $max chars";
             }
         }
     }
