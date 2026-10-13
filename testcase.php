@@ -65,7 +65,6 @@ function validate(array $data, array $rules): array
                 $errors[$fieldsss] = "$fieldsss is required";
             } 
                 
-                $max = (int) substr($r, 4);
             
         }
     }
