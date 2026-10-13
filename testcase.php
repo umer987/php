@@ -66,7 +66,6 @@ function validate(array $data, array $rules): array
             } 
                 
                 $max = (int) substr($r, 4);
-                if (strlen($values) > $max) $errors[$fieldsss] = "$fieldsss max $max chars";
             
         }
     }
