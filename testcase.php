@@ -1,6 +1,5 @@
 <?php
 // RAW PHP CRUD API — Tasks
-// Run:  php -S localhost:8000
 
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
