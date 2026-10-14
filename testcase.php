@@ -1,5 +1,4 @@
 <?php
-// ============================================================
 // RAW PHP CRUD API — Tasks
 // Run:  php -S localhost:8000
 // Test: http://localhost:8000/api.php/tasks
