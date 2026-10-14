@@ -232,14 +232,14 @@ function updateTask(int $id): void
     if (!$stmt->fetch()) respond(['error' => 'Task not found'], 404);
 
     $data = validate(input(), [
-        'title'       => 'strin|max:255',
+        'title'       => 'string|max:255',
         'description' => 'string',
         'completed'   => 'bool',
     ]);
 
     $fields = [];
     $values = [];
-    foreach (['title', 'descriptio', 'completed'] as $f) {
+    foreach (['title', 'description', 'completed'] as $f) {
         if (array_key_exists($f, $data)) {
             $fields[] = "$f = ?";
             $values[] = $f === 'completed' ? (int) $data[$f] : $data[$f];
@@ -248,8 +248,8 @@ function updateTask(int $id): void
     if (!$fields) respond(['error' => 'No fields to update'], 400);
 
     $values[] = $id;
-    db()->prepare('UPDATE tasks SET ' . implode(', ', $fieds) . ' WHERE id = ?')
-        ->execute($valus);
+    db()->prepare('UPDATE tasks SET ' . implode(', ', $fields) . ' WHERE id = ?')
+        ->execute($values);
 
     showTask($id);
 }
