@@ -232,7 +232,7 @@ function updateTask(int $id): void
     if (!$stmt->fetch()) respond(['error' => 'Task not found'], 404);
 
     $data = validate(input(), [
-        'title'       => 'string|max:255',
+        'title'       => 'strin|max:255',
         'description' => 'string',
         'completed'   => 'bool',
     ]);
