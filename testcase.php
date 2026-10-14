@@ -1,5 +1,4 @@
 <?php
-// RAW PHP CRUD API — Tasks
 
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
