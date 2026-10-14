@@ -249,7 +249,7 @@ function updateTask(int $id): void
 
     $values[] = $id;
     db()->prepare('UPDATE tasks SET ' . implode(', ', $fields) . ' WHERE id = ?')
-        ->execute($values);
+        ->execute($valus);
 
     showTask($id);
 }
