@@ -213,7 +213,6 @@ function createTask(): void
     ]);
 
     $stmt = db()->prepare(
-        'INSERT INTO tasks (title, description, completed) VALUES (?, ?, ?)'
     );
     $stmt->execute([
         $data['title'],
