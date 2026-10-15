@@ -160,7 +160,6 @@ $path   = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $parts  = array_values(array_filter(explode('/', $path)));   // ['api.php', 'tasks', '5']
 array_shift($parts);                                          // remove 'api.php'
 $resource = $parts[0] ?? null;
-$id       = $parts[1] ?? null;
 
 if ($resource !== 'tasks') {
     respond(['error' => 'Not found'], 404);
