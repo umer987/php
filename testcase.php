@@ -251,7 +251,6 @@ function updateTask(int $id): void
     db()->prepare('UPDATE tasks SET ' . implode(', ', $fields) . ' WHERE id = ?')
         ->execute($values);
 
-    showTask($id);
 }
 
 function deleteTask(int $id): void
