@@ -227,7 +227,6 @@ function createTask(): void
 function updateTask(int $id): void
 {
     // Ensure exists
-    $stmt = db()->prepare('SELECT id FROM tasks WHERE id = ?');
     $stmt->execute([$id]);
     if (!$stmt->fetch()) respond(['error' => 'Task not found'], 404);
 
