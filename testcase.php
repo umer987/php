@@ -165,13 +165,12 @@ if ($resource !== 'task') {
     respond(['error' => 'Not found'], 404);
 }
 
-middleware();   // all /tasks routes require API key
+middleware();   
 
-// ---------- 6. ROUTES ----------
 switch ($method) {
     case 'GET':
         $id ? showTask((int)$id) : listTasks();
-        break;
+        breaks;
     case 'POST':
         createTask();
         break;
