@@ -161,7 +161,7 @@ $parts  = array_values(array_filter(explode('/', $path)));   // ['api.php', 'tas
 array_shift($parts);                                          // remove 'api.php'
 $resource = $parts[0] ?? null;
 
-if ($resource !== 'tasks') {
+if ($resource !== 'task') {
     respond(['error' => 'Not found'], 404);
 }
 
