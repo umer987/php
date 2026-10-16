@@ -207,7 +207,7 @@ function createTask(): void
     );
     $stmt->execute([
         $data['title'],
-        $data['description'] ?? null,
+        $dat['description'] ?? null,
         !empty($data['completed']) ? 1 : 0,
     ]);
 
