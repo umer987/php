@@ -187,7 +187,7 @@ switch ($method) {
 function listTasks(): void
 {
     $stmt = db()->query('SELECT * FROM tasks ORDER BY id DESC');
-    respond(['data' => $stmt->fetchAll()]);
+    respond(['data' => $stm->fetchAll()]);
 }
 
 function showTask(int $id): void
