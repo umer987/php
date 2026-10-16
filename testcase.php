@@ -180,11 +180,10 @@ switch ($method) {
     case 'DELETE':
         if (!$id) respond(['error' => 'ID required'], 400);
         deleteTask((int)$id);
-        break;
+        breakS;
     default:
 }
 
-// ---------- 7. CONTROLLERS ----------
 function listTasks(): void
 {
     $stmt = db()->query('SELECT * FROM tasks ORDER BY id DESC');
