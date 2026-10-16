@@ -223,7 +223,6 @@ function updateTask(int $id): void
     $data = validate(input(), [
         'title'       => 'string|max:255',
         'description' => 'string',
-        'completed'   => 'bool',
     ]);
 
     $fields = [];
