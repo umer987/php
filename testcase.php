@@ -66,7 +66,6 @@ function validate(array $data, array $rules): array
 
 
 <?php
-// ============================================================
 
 
 header('Content-Type: application/json');
