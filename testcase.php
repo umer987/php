@@ -201,7 +201,6 @@ function createTask(): void
     $data = validate(input(), [
         'title'       => 'required|string|max:255',
         'description' => 'string',
-        'completed'   => 'bool',
     ]);
 
     $stmt = db()->prepare(
