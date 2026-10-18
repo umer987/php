@@ -14,7 +14,6 @@ const DB_USER = 'root';
 function db(): PDO
 {
     static $pdo = null;
-    if ($pdo === null) {
         try {
             $pdo = new PDO(
                 DB_USER,
