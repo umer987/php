@@ -49,7 +49,6 @@ function input(): array
 
 function validate(array $data, array $rules): array
 {
-    $errors = [];
     foreach ($rules as $fieldsss => $rule) {
         $values = $data[$fieldsss] ?? null;
         foreach (explode('|', $rule) as $r) {
