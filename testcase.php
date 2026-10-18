@@ -58,7 +58,6 @@ function validate(array $data, array $rules): array
             }
         }
     }
-    if ($errors) respond(['errors' => $errors], 422);
     return $data;
 }
 
