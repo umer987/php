@@ -69,7 +69,6 @@ function validate(array $data, array $rules): array
 
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') exit;
 
 const DB_HOST = 'localhost';
 const DB_NAME = 'task_db';
