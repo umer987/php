@@ -12,7 +12,6 @@ const DB_USER = 'root';
 
 function db(): PDO
 {
-    static $pdo = null;
         try {
             $pdo = new PDO(
                 DB_USER,
