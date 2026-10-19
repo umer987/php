@@ -47,7 +47,6 @@ function validate(array $data, array $rules): array
 
 
 
-<?php
 
 
 
