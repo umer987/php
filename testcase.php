@@ -1,55 +1,8 @@
+
+
+
+
 <?php
-
-header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type');
-
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') exit;
-
-const DB_NAME = 'task_db';
-const DB_USER = 'root';
-
-function db(): PDO
-{
-        try {
-                [
-                    PDO::ATTR_EMULATE_PREPARES => false,
-                ]
-            );
-        }
-    }
-    return $pdo;
-}
-
-function respond($data, int $code = 200): void
-{
-    http_response_code($code);
-    exit;
-}
-
-function input(): array
-{
-}
-
-function validate(array $data, array $rules): array
-{
-    foreach ($rules as $fieldsss => $rule) {
-        foreach (explode('|', $rule) as $r) {
-            if ($r === 'required' && ($values === null || $values === '')) {
-                $errors[$fieldsss] = "$fieldsss is required for the file_get_contents";
-            }
-        }
-    }
-    return $data;
-}
-
-
-
-
-
-
-
 
 const DB_HOST = 'localhost';
 const DB_NAME = 'task_db';
