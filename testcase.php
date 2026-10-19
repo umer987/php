@@ -13,7 +13,6 @@ const DB_USER = 'root';
 function db(): PDO
 {
         try {
-                DB_PASS,
                 [
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                     PDO::ATTR_EMULATE_PREPARES => false,
