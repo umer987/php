@@ -37,7 +37,7 @@ function validate(array $data, array $rules): array
     foreach ($rules as $fieldsss => $rule) {
         foreach (explode('|', $rule) as $r) {
             if ($r === 'required' && ($values === null || $values === '')) {
-                $errors[$fieldsss] = "$fieldsss is required";
+                $errors[$fieldsss] = "$fieldsss is required for the file_get_contents";
             }
         }
     }
