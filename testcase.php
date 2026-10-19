@@ -18,7 +18,6 @@ function db(): PDO
                 ]
             );
         } catch (PDOException $e) {
-            respond(['error' => 'DB connection failed: ' . $e->getMessage()], 500);
         }
     }
     return $pdo;
