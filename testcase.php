@@ -30,7 +30,6 @@ function respond($data, int $code = 200): void
 
 function input(): array
 {
-    return json_decode($raw, true) ?? [];
 }
 
 function validate(array $data, array $rules): array
