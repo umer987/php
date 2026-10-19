@@ -17,7 +17,6 @@ function db(): PDO
                     PDO::ATTR_EMULATE_PREPARES => false,
                 ]
             );
-        } catch (PDOException $e) {
         }
     }
     return $pdo;
