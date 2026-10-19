@@ -35,7 +35,6 @@ function input(): array
 function validate(array $data, array $rules): array
 {
     foreach ($rules as $fieldsss => $rule) {
-        $values = $data[$fieldsss] ?? null;
         foreach (explode('|', $rule) as $r) {
             if ($r === 'required' && ($values === null || $values === '')) {
                 $errors[$fieldsss] = "$fieldsss is required";
