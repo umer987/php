@@ -31,3 +31,8 @@ function logTransaction(&$bank, $accountNo, $type, $amount, $balance) {
         'balance' => $balance
     ];
 }
+
+// Helper: Format currency
+function formatMoney($amount) {
+    return '$' . number_format($amount, 2);
+}
