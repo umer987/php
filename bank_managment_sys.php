@@ -36,3 +36,32 @@ function logTransaction(&$bank, $accountNo, $type, $amount, $balance) {
 function formatMoney($amount) {
     return '$' . number_format($amount, 2);
 }
+
+
+// Handle actions
+$action = $_POST['action'] ?? $_GET['action'] ?? '';
+
+// CREATE ACCOUNT
+if ($action === 'create') {
+    $name = trim($_POST['name'] ?? '');
+    $initialDeposit = floatval($_POST['initial_deposit'] ?? 0);
+    $pin = trim($_POST['pin'] ?? '');
+
+    if ($name === '' || strlen($pin) !== 4 || !ctype_digit($pin)) {
+        $message = 'Please enter a valid name and a 4-digit PIN.';
+        $messageType = 'error';
+    } elseif ($initialDeposit < 0) {
+        $message = 'Initial deposit cannot be negative.';
+        $messageType = 'error';
+    } else {
+        $accountNo = $bank['next_account']++;
+        $bank['accounts'][$accountNo] = [
+            'name' => $name,
+            'balance' => $initialDeposit,
+            'pin' => $pin
+        ];
+        logTransaction($bank, $accountNo, 'Account Created', $initialDeposit, $initialDeposit);
+        $message = "Account created successfully! Account Number: <strong>$accountNo</strong>";
+        $messageType = 'success';
+    }
+}
