@@ -65,3 +65,23 @@ if ($action === 'create') {
         $messageType = 'success';
     }
 }
+
+
+// DEPOSIT
+if ($action === 'deposit') {
+    $accountNo = intval($_POST['account_no'] ?? 0);
+    $amount = floatval($_POST['amount'] ?? 0);
+
+    if (!isset($bank['accounts'][$accountNo])) {
+        $message = 'Account not found.';
+        $messageType = 'error';
+    } elseif ($amount <= 0) {
+        $message = 'Deposit amount must be greater than zero.';
+        $messageType = 'error';
+    } else {
+        $bank['accounts'][$accountNo]['balance'] += $amount;
+        logTransaction($bank, $accountNo, 'Deposit', $amount, $bank['accounts'][$accountNo]['balance']);
+        $message = 'Deposit successful! New balance: ' . formatMoney($bank['accounts'][$accountNo]['balance']);
+        $messageType = 'success';
+    }
+}
