@@ -15,3 +15,19 @@ if (!isset($_SESSION['bank'])) {
         'transactions' => []
     ];
 }
+
+
+$bank = &$_SESSION['bank'];
+$message = '';
+$messageType = '';
+
+// Helper: Log transaction
+function logTransaction(&$bank, $accountNo, $type, $amount, $balance) {
+    $bank['transactions'][] = [
+        'time' => date('Y-m-d H:i:s'),
+        'account' => $accountNo,
+        'type' => $type,
+        'amount' => $amount,
+        'balance' => $balance
+    ];
+}
