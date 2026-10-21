@@ -103,3 +103,6 @@ if ($action === 'withdraw') {
              $message = 'Withdrawal amount must be greater than zero.';
         $messageType = 'error';
     } elseif ($amount > $bank['accounts'][$accountNo]['balance']) {
+          $message = 'Insufficient funds. Available: ' . formatMoney($bank['accounts'][$accountNo]['balance']);
+        $messageType = 'error';
+    } else {
