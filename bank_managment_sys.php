@@ -122,3 +122,12 @@ if ($action === 'transfer') {
         $message = 'One or both accounts not found.';
         $messageType = 'error';
     } elseif ($from === $to) {
+               $message = 'Cannot transfer to the same account.';
+        $messageType = 'error';
+    } elseif ($bank['accounts'][$from]['pin'] !== $pin) {
+        $message = 'Invalid PIN for source account.';
+        $messageType = 'error';
+    } elseif ($amount <= 0) {
+        $message = 'Transfer amount must be greater than zero.';
+        $messageType = 'error';
+    } elseif ($amount > $bank['accounts'][$from]['balance']) {
