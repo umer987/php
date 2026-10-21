@@ -112,3 +112,9 @@ if ($action === 'withdraw') {
         $messageType = 'success';
     }
 }
+// TRANSFER
+if ($action === 'transfer') {
+    $from = intval($_POST['from_account'] ?? 0);
+    $to = intval($_POST['to_account'] ?? 0);
+    $amount = floatval($_POST['amount'] ?? 0);
+    $pin = trim($_POST['pin'] ?? '');
