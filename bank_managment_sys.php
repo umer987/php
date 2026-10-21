@@ -106,3 +106,5 @@ if ($action === 'withdraw') {
           $message = 'Insufficient funds. Available: ' . formatMoney($bank['accounts'][$accountNo]['balance']);
         $messageType = 'error';
     } else {
+                $bank['accounts'][$accountNo]['balance'] -= $amount;
+        logTransaction($bank, $accountNo, 'Withdrawal', $amount, $bank['accounts'][$accountNo]['balance']);
