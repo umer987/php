@@ -118,3 +118,7 @@ if ($action === 'transfer') {
     $to = intval($_POST['to_account'] ?? 0);
     $amount = floatval($_POST['amount'] ?? 0);
     $pin = trim($_POST['pin'] ?? '');
+        if (!isset($bank['accounts'][$from]) || !isset($bank['accounts'][$to])) {
+        $message = 'One or both accounts not found.';
+        $messageType = 'error';
+    } elseif ($from === $to) {
