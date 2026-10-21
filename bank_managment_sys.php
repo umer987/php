@@ -85,3 +85,10 @@ if ($action === 'deposit') {
         $messageType = 'success';
     }
 }
+
+
+// WITHDRAW
+if ($action === 'withdraw') {
+    $accountNo = intval($_POST['account_no'] ?? 0);
+    $amount = floatval($_POST['amount'] ?? 0);
+    $pin = trim($_POST['pin'] ?? '');
