@@ -131,3 +131,14 @@ if ($action === 'transfer') {
         $message = 'Transfer amount must be greater than zero.';
         $messageType = 'error';
     } elseif ($amount > $bank['accounts'][$from]['balance']) {
+                $message = 'Insufficient funds. Available: ' . formatMoney($bank['accounts'][$from]['balance']);
+        $messageType = 'error';
+    } else {
+        $bank['accounts'][$from]['balance'] -= $amount;
+        $bank['accounts'][$to]['balance'] += $amount;
+        logTransaction($bank, $from, 'Transfer Out', $amount, $bank['accounts'][$from]['balance']);
+        logTransaction($bank, $to, 'Transfer In', $amount, $bank['accounts'][$to]['balance']);
+        $message = 'Transfer successful!';
+        $messageType = 'success';
+    }
+}
