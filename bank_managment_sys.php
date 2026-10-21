@@ -96,3 +96,7 @@ if ($action === 'withdraw') {
     if (!isset($bank['accounts'][$accountNo])) {
         $message = 'Account not found.';
         $messageType = 'error';
+            } elseif ($bank['accounts'][$accountNo]['pin'] !== $pin) {
+        $message = 'Invalid PIN.';
+        $messageType = 'error';
+    } elseif ($amount <= 0) {
