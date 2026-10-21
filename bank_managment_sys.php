@@ -92,3 +92,7 @@ if ($action === 'withdraw') {
     $accountNo = intval($_POST['account_no'] ?? 0);
     $amount = floatval($_POST['amount'] ?? 0);
     $pin = trim($_POST['pin'] ?? '');
+
+    if (!isset($bank['accounts'][$accountNo])) {
+        $message = 'Account not found.';
+        $messageType = 'error';
