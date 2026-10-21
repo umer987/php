@@ -108,3 +108,7 @@ if ($action === 'withdraw') {
     } else {
                 $bank['accounts'][$accountNo]['balance'] -= $amount;
         logTransaction($bank, $accountNo, 'Withdrawal', $amount, $bank['accounts'][$accountNo]['balance']);
+        $message = 'Withdrawal successful! New balance: ' . formatMoney($bank['accounts'][$accountNo]['balance']);
+        $messageType = 'success';
+    }
+}
