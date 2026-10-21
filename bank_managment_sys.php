@@ -100,3 +100,6 @@ if ($action === 'withdraw') {
         $message = 'Invalid PIN.';
         $messageType = 'error';
     } elseif ($amount <= 0) {
+             $message = 'Withdrawal amount must be greater than zero.';
+        $messageType = 'error';
+    } elseif ($amount > $bank['accounts'][$accountNo]['balance']) {
