@@ -153,3 +153,4 @@ if ($action === 'balance') {
     } elseif ($bank['accounts'][$accountNo]['pin'] !== $pin) {
         $message = 'Invalid PIN.';
         $messageType = 'error';
+            } else {
