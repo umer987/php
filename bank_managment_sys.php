@@ -145,4 +145,3 @@ if ($action === 'transfer') {
 // CHECK BALANCE
 if ($action === 'balance') {
     $accountNo = intval($_POST['account_no'] ?? 0);
-    $p
