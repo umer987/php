@@ -146,3 +146,6 @@ if ($action === 'transfer') {
 if ($action === 'balance') {
     $accountNo = intval($_POST['account_no'] ?? 0);
     $pin = trim($_POST['pin'] ?? '');
+    
+    if (!isset($bank['accounts'][$accountNo])) {
+        $message = 'Account not found.';
