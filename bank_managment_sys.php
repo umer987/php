@@ -145,3 +145,4 @@ if ($action === 'transfer') {
 // CHECK BALANCE
 if ($action === 'balance') {
     $accountNo = intval($_POST['account_no'] ?? 0);
+    $pin = trim($_POST['pin'] ?? '');
