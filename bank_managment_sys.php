@@ -149,3 +149,7 @@ if ($action === 'balance') {
     
     if (!isset($bank['accounts'][$accountNo])) {
         $message = 'Account not found.';
+          $messageType = 'error';
+    } elseif ($bank['accounts'][$accountNo]['pin'] !== $pin) {
+        $message = 'Invalid PIN.';
+        $messageType = 'error';
