@@ -158,3 +158,5 @@ if ($action === 'balance') {
 
         $message = "Account: <strong>{$acc['name']}</strong> (#$accountNo)<br>Balance:<strong>" . formatMoney($acc['balance']) . "</strong>";
                 $messageType = 'success';
+  }
+}
