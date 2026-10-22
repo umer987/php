@@ -156,4 +156,4 @@ if ($action === 'balance') {
             } else {
         $acc = $bank['accounts'][$accountNo];
 
-        
+        $message = "Account: <strong>{$acc['name']}</strong> (#$accountNo)<br>Balance:
