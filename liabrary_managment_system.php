@@ -34,3 +34,10 @@ function logMsg(&$msg, &$type, $text, $isError = false) {
 function formatDate($d) {
     return date('d M Y', strtotime($d));
 }
+
+function daysLate($dueDate, $returnDate = null) {
+    $end = $returnDate ? strtotime($returnDate) : time();
+    $due = strtotime($dueDate);
+    $diff = floor(($end - $due) / 86400);
+    return $diff > 0 ? $diff : 0;
+}
