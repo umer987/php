@@ -43,3 +43,18 @@ function daysLate($dueDate, $returnDate = null) {
 }
 // ---------- Actions ----------
 $action = $_POST['action'] ?? $_GET['action'] ?? '';
+// ADD BOOK
+if ($action === 'add_book') {
+    $title = trim($_POST['title'] ?? '');
+    $author = trim($_POST['author'] ?? '');
+    $isbn = trim($_POST['isbn'] ?? '');
+    $copies = intval($_POST['copies'] ?? 1);
+
+    if ($title === '' || $author === '' || $copies < 1) {
+        logMsg($message, $messageType, 'Title, author and copies (>=1) are required.', true);
+    } else {
+        $id = $lib['next_book']++;
+        $lib['books'][$id] = [
+            'title' => $title, 'author' => $author, 'isbn' => $isbn,
+            'copies' => $copies, 'available' => $copies
+      
