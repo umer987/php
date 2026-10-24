@@ -23,3 +23,6 @@ if (!isset($_SESSION['library'])) {
         'next_loan' => 1
     ];
 }
+$lib = &$_SESSION['library'];
+$message = '';
+$messageType = '';
