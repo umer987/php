@@ -26,3 +26,8 @@ if (!isset($_SESSION['library'])) {
 $lib = &$_SESSION['library'];
 $message = '';
 $messageType = '';
+// ---------- Helpers ----------
+function logMsg(&$msg, &$type, $text, $isError = false) {
+    $msg = $text;
+    $type = $isError ? 'error' : 'success';
+}
