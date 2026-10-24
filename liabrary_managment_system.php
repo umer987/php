@@ -31,3 +31,6 @@ function logMsg(&$msg, &$type, $text, $isError = false) {
     $msg = $text;
     $type = $isError ? 'error' : 'success';
 }
+function formatDate($d) {
+    return date('d M Y', strtotime($d));
+}
