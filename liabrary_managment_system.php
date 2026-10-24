@@ -43,7 +43,7 @@ function daysLate($dueDate, $returnDate = null) {
 }
 // ---------- Actions ----------
 $action = $_POST['action'] ?? $_GET['action'] ?? '';
-// ADD BOOK
+// ADD BOOK FOR PROGRAM
 if ($action === 'add_book') {
     $title = trim($_POST['title'] ?? '');
     $author = trim($_POST['author'] ?? '');
