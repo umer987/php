@@ -57,4 +57,7 @@ if ($action === 'add_book') {
         $lib['books'][$id] = [
             'title' => $title, 'author' => $author, 'isbn' => $isbn,
             'copies' => $copies, 'available' => $copies
-      
+        ];
+        logMsg($message, $messageType, "Book added successfully! Book ID: <strong>$id</strong>");
+    }
+}
