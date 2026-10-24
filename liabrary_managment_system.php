@@ -12,3 +12,8 @@ if (!isset($_SESSION['library'])) {
             3 => ['title' => '1984', 'author' => 'George Orwell', 'isbn' => '9780451524935', 'copies' => 4, 'available' => 4],
             4 => ['title' => 'Pride and Prejudice', 'author' => 'Jane Austen', 'isbn' => '9780141439518', 'copies' => 1, 'available' => 1]
         ],
+         'members' => [
+            101 => ['name' => 'Alice Brown', 'email' => 'alice@mail.com', 'phone' => '0300-1111111'],
+            102 => ['name' => 'Bob Wilson', 'email' => 'bob@mail.com', 'phone' => '0300-2222222'],
+            103 => ['name' => 'Charlie Davis', 'email' => 'charlie@mail.com', 'phone' => '0300-3333333']
+        ],
