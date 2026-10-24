@@ -17,3 +17,9 @@ if (!isset($_SESSION['library'])) {
             102 => ['name' => 'Bob Wilson', 'email' => 'bob@mail.com', 'phone' => '0300-2222222'],
             103 => ['name' => 'Charlie Davis', 'email' => 'charlie@mail.com', 'phone' => '0300-3333333']
         ],
+        'loans' => [], // each: book_id, member_id, borrow_date, due_date, return_date (null if active)
+        'next_book' => 5,
+        'next_member' => 104,
+        'next_loan' => 1
+    ];
+}
