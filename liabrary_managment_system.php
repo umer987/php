@@ -84,3 +84,5 @@ if ($action === 'issue') {
     if (!isset($lib['books'][$bookId])) {
         logMsg($message, $messageType, 'Book not found.', true);
     } elseif (!isset($lib['members'][$memberId])) {
+         logMsg($message, $messageType, 'Member not found.', true);
+    } elseif ($lib['books'][$bookId]['available'] < 1) {
