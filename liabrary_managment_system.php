@@ -78,3 +78,7 @@ if ($action === 'add_member') {
 // ISSUE (BORROW) BOOK
 if ($action === 'issue') {
     $bookId = intval($_POST['book_id'] ?? 0);
+        $memberId = intval($_POST['member_id'] ?? 0);
+    $days = intval($_POST['days'] ?? 14);
+
+    if (!isset($lib['books'][$bookId])) {
