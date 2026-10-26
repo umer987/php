@@ -111,3 +111,6 @@ if ($action === 'return') {
         logMsg($message, $messageType, 'Loan record not found.', true);
         } elseif ($lib['loans'][$loanId]['return_date'] !== null) {
         logMsg($message, $messageType, 'This book has already been returned.', true);
+            } else {
+        $loan = &$lib['loans'][$loanId];
+        $loan['return_date'] = date('Y-m-d');
