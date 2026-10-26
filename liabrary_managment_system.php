@@ -91,3 +91,4 @@ if ($action === 'issue') {
         logMsg($message, $messageType, 'Loan period must be between 1 and 90 days.', true);
          } else {
         $due = date('Y-m-d', strtotime("+$days days"));
+                $loanId = $lib['next_loan']++;
