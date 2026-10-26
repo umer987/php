@@ -70,4 +70,8 @@ if ($action === 'add_member') {
 
     if ($name === '' || $email === '') {
         logMsg($message, $messageType, 'Name and email are required.', true);
-    } else {
+    } else { $id = $lib['next_member']++;
+        $lib['members'][$id] = ['name' => $name, 'email' => $email, 'phone' => $phone];
+        logMsg($message, $messageType, "Member registered! Member ID: <strong>$id</strong>");
+    }
+}
