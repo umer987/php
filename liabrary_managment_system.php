@@ -100,3 +100,4 @@ if ($action === 'issue') {
             'return_date' => null
         ];
         $lib['books'][$bookId]['available']--;
+                logMsg($message, $messageType,
