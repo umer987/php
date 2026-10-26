@@ -98,3 +98,5 @@ if ($action === 'issue') {
             'borrow_date' => date('Y-m-d'),
             'due_date' => $due,
             'return_date' => null
+        ];
+        $lib['books'][$bookId]['available']--;
