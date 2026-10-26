@@ -94,3 +94,4 @@ if ($action === 'issue') {
                 $loanId = $lib['next_loan']++;
         $lib['loans'][$loanId] = [
             'book_id' => $bookId,
+            'member_id' => $memberId,
