@@ -86,3 +86,6 @@ if ($action === 'issue') {
     } elseif (!isset($lib['members'][$memberId])) {
          logMsg($message, $messageType, 'Member not found.', true);
     } elseif ($lib['books'][$bookId]['available'] < 1) {
+         logMsg($message, $messageType, 'No copies available for this book.', true);
+    } elseif ($days < 1 || $days > 90) {
+        logMsg($message, $messageType, 'Loan period must be between 1 and 90 days.', true);
