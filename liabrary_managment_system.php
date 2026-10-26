@@ -61,3 +61,13 @@ if ($action === 'add_book') {
         logMsg($message, $messageType, "Book added successfully! Book ID: <strong>$id</strong>");
     }
 }
+
+// ADD MEMBER
+if ($action === 'add_member') {
+    $name = trim($_POST['name'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $phone = trim($_POST['phone'] ?? '');
+
+    if ($name === '' || $email === '') {
+        logMsg($message, $messageType, 'Name and email are required.', true);
+    } else {
