@@ -101,3 +101,4 @@ if ($action === 'issue') {
         ];
         $lib['books'][$bookId]['available']--;
                 logMsg($message, $messageType,
+            "Book issued successfully! Loan ID: <strong>$loanId</strong>. Due: <strong>" . formatDate($due) . "</strong>");
