@@ -96,3 +96,4 @@ if ($action === 'issue') {
             'book_id' => $bookId,
             'member_id' => $memberId,
             'borrow_date' => date('Y-m-d'),
+            'due_date' => $due,
