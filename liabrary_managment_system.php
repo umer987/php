@@ -95,3 +95,4 @@ if ($action === 'issue') {
         $lib['loans'][$loanId] = [
             'book_id' => $bookId,
             'member_id' => $memberId,
+            'borrow_date' => date('Y-m-d'),
