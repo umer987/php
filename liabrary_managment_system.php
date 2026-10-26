@@ -107,3 +107,5 @@ if ($action === 'issue') {
          // RETURN BOOK
 if ($action === 'return') {
     $loanId = intval($_POST['loan_id'] ?? 0);
+       if (!isset($lib['loans'][$loanId])) {
+        logMsg($message, $messageType, 'Loan record not found.', true);
