@@ -82,3 +82,5 @@ if ($action === 'issue') {
     $days = intval($_POST['days'] ?? 14);
 
     if (!isset($lib['books'][$bookId])) {
+        logMsg($message, $messageType, 'Book not found.', true);
+    } elseif (!isset($lib['members'][$memberId])) {
