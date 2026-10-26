@@ -114,3 +114,5 @@ if ($action === 'return') {
             } else {
         $loan = &$lib['loans'][$loanId];
         $loan['return_date'] = date('Y-m-d');
+         $lib['books'][$loan['book_id']]['available']++;
+        $late = daysLate($loan['due_date'], $loan['return_date']);
