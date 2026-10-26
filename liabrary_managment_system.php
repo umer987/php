@@ -89,3 +89,5 @@ if ($action === 'issue') {
          logMsg($message, $messageType, 'No copies available for this book.', true);
     } elseif ($days < 1 || $days > 90) {
         logMsg($message, $messageType, 'Loan period must be between 1 and 90 days.', true);
+         } else {
+        $due = date('Y-m-d', strtotime("+$days days"));
