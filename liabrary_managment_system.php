@@ -93,3 +93,4 @@ if ($action === 'issue') {
         $due = date('Y-m-d', strtotime("+$days days"));
                 $loanId = $lib['next_loan']++;
         $lib['loans'][$loanId] = [
+            'book_id' => $bookId,
