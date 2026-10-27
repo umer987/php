@@ -124,3 +124,6 @@ if ($action === 'return') {
 logMsg($message, $messageType, $msg);
     }
 }
+
+// DELETE BOOK
+if ($action === 'delete_book') {
