@@ -121,3 +121,6 @@ if ($action === 'return') {
         if ($late > 0) {
                         $msg .= " <strong>Late by $late day(s). Fine: Rs. " . number_format($fine, 2) . "</strong>";
         }
+logMsg($message, $messageType, $msg);
+    }
+}
