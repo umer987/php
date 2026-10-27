@@ -120,4 +120,4 @@ if ($action === 'return') {
         $msg = "Book returned successfully!";
         if ($late > 0) {
                         $msg .= " <strong>Late by $late day(s). Fine: Rs. " . number_format($fine, 2) . "</strong>";
-
+        }
