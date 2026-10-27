@@ -118,3 +118,4 @@ if ($action === 'return') {
         $late = daysLate($loan['due_date'], $loan['return_date']);
                 $fine = $late * 10; // Rs. 10 per day
         $msg = "Book returned successfully!";
+        if ($late > 0) {
