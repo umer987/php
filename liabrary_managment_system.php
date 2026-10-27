@@ -119,3 +119,5 @@ if ($action === 'return') {
                 $fine = $late * 10; // Rs. 10 per day
         $msg = "Book returned successfully!";
         if ($late > 0) {
+                        $msg .= " <strong>Late by $late day(s). Fine: Rs. " . number_format($fine, 2) . "</strong>";
+
