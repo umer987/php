@@ -129,3 +129,4 @@ logMsg($message, $messageType, $msg);
 if ($action === 'delete_book') {
      $bookId = intval($_POST['book_id'] ?? 0);
     $activeLoans = 0;
+        foreach ($lib['loans'] as $l) {
