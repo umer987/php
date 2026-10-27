@@ -116,3 +116,4 @@ if ($action === 'return') {
         $loan['return_date'] = date('Y-m-d');
          $lib['books'][$loan['book_id']]['available']++;
         $late = daysLate($loan['due_date'], $loan['return_date']);
+                $fine = $late * 10; // Rs. 10 per day
