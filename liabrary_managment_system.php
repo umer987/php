@@ -4,7 +4,6 @@
 
 session_start();
 
-// Initialize library data
 if (!isset($_SESSION['library'])) {
     $_SESSION['library'] = [
         'books' => [   1 => ['title' => 'The Great Gatsby', 'author' => 'F. Scott Fitzgerald', 'isbn' => '9780743273565', 'copies' => 3, 'available' => 3],
