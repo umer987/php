@@ -41,7 +41,6 @@ function daysLate($dueDate, $returnDate = null) {
     $diff = floor(($end - $due) / 86400);
     return $diff > 0 ? $diff : 0;
 }
-// ---------- Actions ----------
 $action = $_POST['action'] ?? $_GET['action'] ?? '';
 // ADD BOOK FOR PROGRAM
 if ($action === 'add_book') {
