@@ -1,5 +1,4 @@
 <?php
-// Simple PHP Library Management System
 
 session_start();
 
