@@ -104,7 +104,6 @@ if ($action === 'issue') {
             "Book issued successfully! Loan ID: <strong>$loanId</strong>. Due: <strong>" . formatDate($due) . "</strong>");
          }}
 
-         // RETURN BOOK
 if ($action === 'return') {
     $loanId = intval($_POST['loan_id'] ?? 0);
        if (!isset($lib['loans'][$loanId])) {
