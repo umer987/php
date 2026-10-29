@@ -42,7 +42,6 @@ function daysLate($dueDate, $returnDate = null) {
     return $diff > 0 ? $diff : 0;
 }
 $action = $_POST['action'] ?? $_GET['action'] ?? '';
-// ADD BOOK FOR PROGRAM
 if ($action === 'add_book') {
     $title = trim($_POST['title'] ?? '');
     $author = trim($_POST['author'] ?? '');
