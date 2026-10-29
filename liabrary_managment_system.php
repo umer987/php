@@ -62,7 +62,6 @@ if ($action === 'add_book') {
     }
 }
 
-// ADD MEMBER
 if ($action === 'add_member') {
     $name = trim($_POST['name'] ?? '');
     $email = trim($_POST['email'] ?? '');
