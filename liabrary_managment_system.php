@@ -75,7 +75,6 @@ if ($action === 'add_member') {
         logMsg($message, $messageType, "Member registered! Member ID: <strong>$id</strong>");
     }
 }
-// ISSUE (BORROW) BOOK
 if ($action === 'issue') {
     $bookId = intval($_POST['book_id'] ?? 0);
         $memberId = intval($_POST['member_id'] ?? 0);
