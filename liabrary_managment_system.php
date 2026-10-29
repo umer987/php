@@ -125,7 +125,6 @@ logMsg($message, $messageType, $msg);
     }
 }
 
-// DELETE BOOK
 if ($action === 'delete_book') {
      $bookId = intval($_POST['book_id'] ?? 0);
     $activeLoans = 0;
