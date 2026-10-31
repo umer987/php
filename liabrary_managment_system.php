@@ -120,3 +120,4 @@ if ($action === 'delete_book') {
      $bookId = intval($_POST['book_id'] ?? 0);
     $activeLoans = 0;
         foreach ($lib['loans'] as $l) {
+        if ($l['book_id'] === $bookId && $l['return_date'] === null) $activeLoans++;
