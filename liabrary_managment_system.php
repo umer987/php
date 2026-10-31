@@ -132,3 +132,4 @@ if ($action === 'delete_book') {
   }
 }
 // DELETE MEMBER
+if ($action === 'delete_member') {
