@@ -127,3 +127,4 @@ if ($action === 'delete_book') {
     } elseif (!isset($lib['books'][$bookId])) {
         logMsg($message, $messageType, 'Book not found.', true);
     } else {
+        unset($lib['books'][$bookId]);
