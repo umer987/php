@@ -131,3 +131,4 @@ if ($action === 'delete_book') {
         logMsg($message, $messageType, 'Book deleted successfully.');
   }
 }
+// DELETE MEMBER
