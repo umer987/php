@@ -123,3 +123,4 @@ if ($action === 'delete_book') {
         if ($l['book_id'] === $bookId && $l['return_date'] === null) $activeLoans++;
  }
     if ($activeLoans > 0) {
+                logMsg($message, $messageType, 'Cannot delete: book has active loans.', true);
