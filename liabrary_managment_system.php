@@ -128,3 +128,4 @@ if ($action === 'delete_book') {
         logMsg($message, $messageType, 'Book not found.', true);
     } else {
         unset($lib['books'][$bookId]);
+        logMsg($message, $messageType, 'Book deleted successfully.');
