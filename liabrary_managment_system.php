@@ -121,3 +121,5 @@ if ($action === 'delete_book') {
     $activeLoans = 0;
         foreach ($lib['loans'] as $l) {
         if ($l['book_id'] === $bookId && $l['return_date'] === null) $activeLoans++;
+ }
+    if ($activeLoans > 0) {
