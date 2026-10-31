@@ -129,3 +129,5 @@ if ($action === 'delete_book') {
     } else {
         unset($lib['books'][$bookId]);
         logMsg($message, $messageType, 'Book deleted successfully.');
+  }
+}
