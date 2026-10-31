@@ -126,3 +126,4 @@ if ($action === 'delete_book') {
                 logMsg($message, $messageType, 'Cannot delete: book has active loans.', true);
     } elseif (!isset($lib['books'][$bookId])) {
         logMsg($message, $messageType, 'Book not found.', true);
+    } else {
