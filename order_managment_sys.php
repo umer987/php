@@ -37,3 +37,10 @@ function formatMoney($amount) {
 function formatDate($d) {
     return date('d M Y, h:i A', strtotime($d));
 }
+function orderTotal($order) {
+    $total = 0;
+    foreach ($order['items'] as $item) {
+        $total += $item['price'] * $item['qty'];
+    }
+    return $total;
+}
