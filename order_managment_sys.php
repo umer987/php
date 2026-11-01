@@ -34,3 +34,6 @@ function logMsg(&$msg, &$type, $text, $isError = false) {
 function formatMoney($amount) {
     return 'Rs. ' . number_format($amount, 2);
 }
+function formatDate($d) {
+    return date('d M Y, h:i A', strtotime($d));
+}
