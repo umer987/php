@@ -31,3 +31,6 @@ function logMsg(&$msg, &$type, $text, $isError = false) {
     $msg = $text;
     $type = $isError ? 'error' : 'success';
 }
+function formatMoney($amount) {
+    return 'Rs. ' . number_format($amount, 2);
+}
