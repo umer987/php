@@ -23,3 +23,6 @@ if (!isset($_SESSION['oms'])) {
         'next_order' => 1001
     ];
 }
+$oms = &$_SESSION['oms'];
+$message = '';
+$messageType = '';
