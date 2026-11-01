@@ -59,3 +59,4 @@ if ($action === 'add_product') {
         logMsg($message, $messageType, 'Valid name, price (>0) and stock (>=0) are required.', true);
         } else {
         $id = $oms['next_product']++;
+                $oms['products'][$id] = ['name' => $name, 'price' => $price, 'stock' => $stock];
