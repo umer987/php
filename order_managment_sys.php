@@ -12,3 +12,5 @@ if (!isset($_SESSION['oms'])) {
             4 => ['name' => 'Laptop Stand', 'price' => 1800.00, 'stock' => 8],
             5 => ['name' => 'Webcam HD', 'price' => 3200.00, 'stock' => 5]
         ],
+        'customers' => [
+            101 => ['name' => 'Ahmed Khan', 'email' => 'ahmed@mail.com', 'phone' => '0300-1111111', 'address' => 'Karachi'],
