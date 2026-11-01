@@ -15,3 +15,5 @@ if (!isset($_SESSION['oms'])) {
         'customers' => [
             101 => ['name' => 'Ahmed Khan', 'email' => 'ahmed@mail.com', 'phone' => '0300-1111111', 'address' => 'Karachi'],
             102 => ['name' => 'Sara Ali', 'email' => 'sara@mail.com', 'phone' => '0300-2222222', 'address' => 'Lahore'],
+              103 => ['name' => 'Bilal Ahmed', 'email' => 'bilal@mail.com', 'phone' => '0300-3333333', 'address' => 'Islamabad']
+        ],
