@@ -51,3 +51,6 @@ $action = $_POST['action'] ?? $_GET['action'] ?? '';
 // ADD PRODUCT
 if ($action === 'add_product') {
     $name = trim($_POST['name'] ?? '');
+
+      $price = floatval($_POST['price'] ?? 0);
+    $stock = intval($_POST['stock'] ?? 0);
