@@ -44,7 +44,6 @@ function orderTotal($order) {
     }
     return $total;
 }
-// Status flow: Pending -> Processing -> Shipped -> Delivered (or Cancelled)
 $statusFlow = ['Pending', 'Processing', 'Shipped', 'Delivered'];
 // ---------- Actions ----------
 $action = $_POST['action'] ?? $_GET['action'] ?? '';
