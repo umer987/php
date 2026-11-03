@@ -62,7 +62,6 @@ if ($action === 'add_product') {
   logMsg($message, $messageType, "Product added! Product ID: <strong>$id</strong>");
     }
 }
-// ADD CUSTOMER
 if ($action === 'add_customer') {
       $name = trim($_POST['name'] ?? '');
     $email = trim($_POST['email'] ?? '');
