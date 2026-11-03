@@ -26,7 +26,6 @@ if (!isset($_SESSION['oms'])) {
 $oms = &$_SESSION['oms'];
 $message = '';
 $messageType = '';
-// 
 function logMsg(&$msg, &$type, $text, $isError = false) {
     $msg = $text;
     $type = $isError ? 'error' : 'success';
