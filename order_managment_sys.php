@@ -17,7 +17,7 @@ if (!isset($_SESSION['oms'])) {
             102 => ['name' => 'Sara Ali', 'email' => 'sara@mail.com', 'phone' => '0300-2222222', 'address' => 'Lahore'],
               103 => ['name' => 'Bilal Ahmed', 'email' => 'bilal@mail.com', 'phone' => '0300-3333333', 'address' => 'Islamabad']
         ],
-        'orders' => [], // each: customer_id, items[], status, created, total
+        'orders' => [], 
         'next_product' => 6,
         'next_customer' => 104,
         'next_order' => 1001
