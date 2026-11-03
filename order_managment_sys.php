@@ -47,7 +47,7 @@ function orderTotal($order) {
 $statusFlow = ['Pending', 'Processing', 'Shipped', 'Delivered'];
 // ---------- Actions ----------
 $action = $_POST['action'] ?? $_GET['action'] ?? '';
-//
+
 if ($action === 'add_product') {
     $name = trim($_POST['name'] ?? '');
 
