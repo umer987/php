@@ -80,3 +80,5 @@ if ($action === 'add_customer') {
 }
 // CREATE ORDER
 if ($action === 'create_order') {
+       $customerId = intval($_POST['customer_id'] ?? 0);
+    $productId = intval($_POST['product_id'] ?? 0);
