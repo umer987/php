@@ -89,3 +89,4 @@ if ($action === 'create_order') {
         logMsg($message, $messageType, 'Product not found.', true);
          } elseif ($qty < 1) {
         logMsg($message, $messageType, 'Quantity must be at least 1.', true);
+            } elseif ($oms['products'][$productId]['stock'] < $qty) {
