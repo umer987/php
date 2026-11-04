@@ -66,3 +66,5 @@ if ($action === 'add_customer') {
     $email = trim($_POST['email'] ?? '');
         $phone = trim($_POST['phone'] ?? '');
     $address = trim($_POST['address'] ?? '');
+    if ($name === '' || $email === '') {
+        logMsg($message, $messageType, 'Name and email are required.', true);
