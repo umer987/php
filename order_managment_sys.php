@@ -76,3 +76,5 @@ if ($action === 'add_customer') {
              'phone' => $phone, 'address' => $address
         ];
         logMsg($message, $messageType, "Customer added! Customer ID: <strong>$id</strong>");
+        }
+}
