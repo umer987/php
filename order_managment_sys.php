@@ -69,3 +69,5 @@ if ($action === 'add_customer') {
     if ($name === '' || $email === '') {
         logMsg($message, $messageType, 'Name and email are required.', true);
             } else {
+
+                    $id = $oms['next_customer']++;
