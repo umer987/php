@@ -91,4 +91,5 @@ if ($action === 'create_order') {
         logMsg($message, $messageType, 'Quantity must be at least 1.', true);
             } elseif ($oms['products'][$productId]['stock'] < $qty) {
         logMsg($message, $messageType, 'Insufficient stock. Available: ' . $oms['products'][$productId]['stock'], true);
-    } else {
+            }
+                    $product = $oms['products'][$productId];
