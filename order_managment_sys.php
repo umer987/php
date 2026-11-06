@@ -99,3 +99,4 @@ if ($action === 'create_order') {
             'items' => [[
                 'product_id' => $productId,
                 'name' => $product['name'],
+                'price' => $product['price'],
