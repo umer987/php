@@ -102,3 +102,4 @@ if ($action === 'create_order') {
                 'price' => $product['price'],
                 'qty' => $qty
             ]],
+            'status' => 'Pending',
