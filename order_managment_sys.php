@@ -100,3 +100,4 @@ if ($action === 'create_order') {
                 'product_id' => $productId,
                 'name' => $product['name'],
                 'price' => $product['price'],
+                'qty' => $qty
