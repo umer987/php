@@ -97,3 +97,4 @@ if ($action === 'create_order') {
         $oms['orders'][$orderId] = [
             'customer_id' => $customerId,
             'items' => [[
+                'product_id' => $productId,
