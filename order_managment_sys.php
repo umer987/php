@@ -96,4 +96,3 @@ if ($action === 'create_order') {
         $orderId = $oms['next_order']++;
         $oms['orders'][$orderId] = [
             'customer_id' => $customerId,
-            'items' => [[
