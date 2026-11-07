@@ -93,4 +93,3 @@ if ($action === 'create_order') {
         logMsg($message, $messageType, 'Insufficient stock. Available: ' . $oms['products'][$productId]['stock'], true);
             }
                     $product = $oms['products'][$productId];
-        $orderId = $oms['next_order']++;
