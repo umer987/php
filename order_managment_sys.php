@@ -103,4 +103,3 @@ if ($action === 'create_order') {
                 'qty' => $qty
             ]],
             'status' => 'Pending',
-            'created' => date('Y-m-d H:i:s')
