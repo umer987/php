@@ -79,4 +79,3 @@ if ($action === 'add_customer') {
         }
 }
 // CREATE ORDER
-if ($action === 'create_order') {
