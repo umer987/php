@@ -72,4 +72,3 @@ if ($action === 'add_customer') {
 
                     $id = $oms['next_customer']++;
  $oms['customers'][$id] = [
-            'name' => $name, 'email' => $email,
