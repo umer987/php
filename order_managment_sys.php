@@ -86,4 +86,3 @@ if ($action === 'create_order') {
     if (!isset($oms['customers'][$customerId])) {
         logMsg($message, $messageType, 'Customer not found.', true);
             } elseif (!isset($oms['products'][$productId])) {
-        logMsg($message, $messageType, 'Product not found.', true);
