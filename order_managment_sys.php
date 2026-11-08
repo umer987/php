@@ -64,5 +64,4 @@ if ($action === 'add_product') {
 if ($action === 'add_customer') {
       $name = trim($_POST['name'] ?? '');
     $email = trim($_POST['email'] ?? '');
-        $phone = trim($_POST['phone'] ?? '');
 
