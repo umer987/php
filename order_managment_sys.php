@@ -74,4 +74,3 @@ if ($action === 'add_customer') {
  $oms['customers'][$id] = [
             'name' => $name, 'email' => $email,
              'phone' => $phone, 'address' => $address
-        ];
