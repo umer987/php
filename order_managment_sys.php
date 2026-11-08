@@ -85,4 +85,3 @@ if ($action === 'create_order') {
         $qty = intval($_POST['qty'] ?? 0);
     if (!isset($oms['customers'][$customerId])) {
         logMsg($message, $messageType, 'Customer not found.', true);
-            } elseif (!isset($oms['products'][$productId])) {
