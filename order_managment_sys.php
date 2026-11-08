@@ -78,4 +78,3 @@ if ($action === 'add_customer') {
         logMsg($message, $messageType, "Customer added! Customer ID: <strong>$id</strong>");
         }
 }
-// CREATE ORDER
