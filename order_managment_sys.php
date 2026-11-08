@@ -66,5 +66,4 @@ if ($action === 'add_customer') {
     $email = trim($_POST['email'] ?? '');
         $phone = trim($_POST['phone'] ?? '');
     $address = trim($_POST['address'] ?? '');
-    if ($name === '' || $email === '') {
 
