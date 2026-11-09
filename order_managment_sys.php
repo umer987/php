@@ -61,5 +61,5 @@ if ($action === 'add_product') {
   logMsg($message, $messageType, "Product added! Product ID: <strong>$id</strong>");
     }
 }
-if ($action === 'add_customer') {
+if ($action === 'add_customer'
 
