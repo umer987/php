@@ -58,5 +58,5 @@ if ($action === 'add_product') {
         } else {
         $id = $oms['next_product']++;
                 $oms['products'][$id] = ['name' => $name, 'price' => $price, 'stock' => $stock];
-  logMsg($message, $messageType, "Product added! Product ID: 
+  logMsg($message, $messageType, "Product added! Product
 
