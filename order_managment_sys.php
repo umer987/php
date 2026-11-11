@@ -55,5 +55,4 @@ if ($action === 'add_product') {
 
       if ($name === '' || $price <= 0 || $stock < 0) {
         logMsg($message, $messageType, 'Valid name, price (>0) and stock (>=0) are required.', true);
-        } else {
-
+        } 
