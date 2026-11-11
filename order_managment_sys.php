@@ -54,4 +54,4 @@ if ($action === 'add_product') {
     $stock = intval($_POST['stock'] ?? 0);
 
       if ($name === '' || $price <= 0 || $stock < 0) {
-        logMsg(
+        
