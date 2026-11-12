@@ -50,7 +50,7 @@ $action = $_POST['action'] ?? $_GET['action'] ?? '';
 if ($action === 'add_product') {
     $name = trim($_POST['name'] ?? '');
 
-      $price = floatval($_POST['price'
+      $price = floatval($_POST
     
 
       
