@@ -53,5 +53,5 @@ if ($action === 'add_product') {
       $price = floatval($_POST['price'] ?? 0);
     $stock = intval($_POST['stock'] ?? 0);
 
-      if ($
+      if 
         
