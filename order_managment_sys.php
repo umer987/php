@@ -50,7 +50,6 @@ $action = $_POST['action'] ?? $_GET['action'] ?? '';
 if ($action === 'add_product') {
     $name = trim($_POST['name'] ?? '');
 
-      $pr 
     
 
       
