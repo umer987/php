@@ -48,7 +48,7 @@ $statusFlow = ['Pending', 'Processing', 'Shipped', 'Delivered'];
 $action = $_POST['action'] ?? $_GET['action'] ?? '';
 
 if ($action === 'add_product') {
-    $name = trim($_POST['name'] ?? 
+    $name = trim($_POST['n
 
     
 
