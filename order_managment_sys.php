@@ -43,7 +43,7 @@ function orderTotal($order) {
     }
     return $total;
 }
-$statusFlow = ['Pending', 'Processing', 'Shipp
+$statusFlow = ['Pending', 'Processing', 'Shi
 
 
     
