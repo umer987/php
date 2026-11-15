@@ -47,7 +47,7 @@ $statusFlow = ['Pending', 'Processing', 'Shipped', 'Delivered'];
 
 $action = $_POST['action'] ?? $_GET['action'] ?? '';
 
-if ($action === 'add_product'
+if ($action === 'add_produ
     
     
 
