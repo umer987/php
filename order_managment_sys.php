@@ -45,7 +45,7 @@ function orderTotal($order) {
 }
 $statusFlow = ['Pending', 'Processing', 'Shipped', 'Delivered'];
 
-$action = $_POS
+$action = $_
 
 
     
