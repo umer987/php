@@ -43,7 +43,7 @@ function orderTotal($order) {
     }
     return $total;
 }
-$statusFlow = ['Pending', 'Pro
+$statusFlow = ['Pending', 'P
 
 
     
