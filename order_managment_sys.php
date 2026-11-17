@@ -43,8 +43,7 @@ function orderTotal($order) {
     }
     return $total;
 }
-$statusFlow 
-
+$statusFlo
 
 
     
