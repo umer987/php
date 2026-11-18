@@ -42,7 +42,7 @@ function orderTotal($order) {
         $total += $item['price'] * $item['qty'];
     }
     return $total;
-}
+
 
 
 
