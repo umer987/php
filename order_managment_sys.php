@@ -41,7 +41,7 @@ function orderTotal($order) {
     foreach ($order['items'] as $item) {
         $total += $item['price'] * $item['qty'];
     }
-    return $total;
+    return $tota
 
 
 
