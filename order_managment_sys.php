@@ -38,7 +38,7 @@ function formatDate($d) {
 }
 function orderTotal($order) {
     $total = 0;
-    foreach
+    forea
         
     
     
