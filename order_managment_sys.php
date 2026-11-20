@@ -39,7 +39,7 @@ function formatDate($d) {
 function orderTotal($order) {
     $total = 0;
     foreach ($order['items'] as $item) {
-        $total += $item['price'] * $item['q
+        $total += $item['price'] * $item['
     
     
 
