@@ -37,7 +37,7 @@ function formatDate($d) {
     return date('d M Y, h:i A', strtotime($d));
 }
 function orderTotal($order) {
-    $totaxl = 0;
+    $totaxl = 
     
         
     
